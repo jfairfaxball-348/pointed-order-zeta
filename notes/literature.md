@@ -117,11 +117,13 @@ and their proof identifies
 c_{a,f}=\sum_{d\ge1}\frac{g(d)}{[\mathbf Q(\zeta_d,a^{1/d}):\mathbf Q]}.
 \]
 
-For the project \(f_z(n)=n^{-z}\), Session 2 gives \(|g_z(n)|\le1\) for real \(z>0\). Hence Felix--Murty applies with \(\alpha=0\), yielding under the same GRH hypothesis
+For the project \(f_z(n)=n^{-z}\), Session 2 gives \(|g_z(n)|\le1\) for real \(z>0\). Hence Felix--Murty applies with \(\alpha=0\) in the paper's standing positive-base setup, yielding under the same GRH hypothesis
 \[
 \boxed{\Delta_a(z)=\sum_{n\ge1}\frac{g_z(n)}{[\mathbf Q(\zeta_n,a^{1/n}):\mathbf Q]}\qquad(z>0).}
 \]
 At \(z=0\), \(\Delta_a(0)=1\) is elementary.
+
+A source-hypothesis nuance should not be hidden: the paper opens with a natural number \(a>1\). Its degree Proposition 3.3 explicitly handles negative integers, and later generalized-Artin sources formulate the framework for integer \(a\), but this audit did not locate a separate theorem-text statement extending Theorem 1.7 itself to negative \(a\). The immediate-corollary collision is therefore fully source-matched for positive bases; the negative-base general-weight theorem remains to be matched precisely. This caveat does not restore novelty of the core \(\mathbf G_m\) construction.
 
 This is the strongest collision found in Session 3.
 

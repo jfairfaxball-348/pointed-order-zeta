@@ -96,9 +96,11 @@ Session 2 proved
 |g_z(n)|\le1
 \qquad(z>0).
 \]
-Hence Theorem 1.7 applies immediately with \(\alpha=0\). This supplies the missing infinite interchange, conditionally on GRH, and gives the exact proposed constant.
+Hence Theorem 1.7 applies immediately with \(\alpha=0\) in the paper's standing positive-base setup. This supplies the missing infinite interchange, conditionally on GRH, and gives the exact proposed constant.
 
-**Layers:** A explicit; B explicit; C immediate consequence; F partial.  
+**Hypothesis nuance:** the paper opens by fixing a natural number \(a>1\). Its Kummer-degree Proposition 3.3 explicitly treats arbitrary integers \(a\ne0,\pm1\), including \(a<0\), and later generalized-Artin literature phrases the framework for integer \(a\). This audit did not locate a separate theorem-text statement extending Felix--Murty Theorem 1.7 itself to negative \(a\). Therefore the direct theorem match for \(\Delta_a(z)\) is recorded as fully verified for positive bases; the negative-base weighted asymptotic remains a source-matching item. This does not rescue novelty of the \(\mathbf G_m\) construction.
+
+**Layers:** A explicit; B explicit; C immediate consequence for the source-matched positive-base case; F partial.  
 **Collision:** **DIRECT_COLLISION** for B; **IMMEDIATE_COROLLARY** for C.
 
 ### Pappalardi (1995) — earlier weighted-Hooley framework
@@ -460,7 +462,7 @@ The potentially nontrivial surviving layer is stronger analytic structure: holom
 3. **Are densities for \(n\mid I_a(p)\) standard?** Yes. For fixed \(n\), complete splitting in \(K_n(a)\) and Chebotarev give the density unconditionally as a fixed finite-extension statement; GRH enters effective uniform estimates used in infinite sums.
 4. **Does the literature already use \(\mathbf Q(\zeta_n,a^{1/n})\) for these conditions?** Yes, explicitly.
 5. **Is \(\sum_n(\mu*f)(n)/[K_n(a):\mathbf Q]\) a standard generalized-Artin expression?** Yes. Felix--Murty proves exactly this constant; Akbary--Fakhari explicitly calls the surrounding framework the Generalized Artin Problem.
-6. **Does a general-\(f\) theorem imply \(\Delta_a(z)\)?** Yes, conditionally on GRH: Felix--Murty Theorem 1.7, because \(|g_z|\le1\).
+6. **Does a general-\(f\) theorem imply \(\Delta_a(z)\)?** Yes, conditionally on GRH, in Felix--Murty's positive-base setup: Theorem 1.7 applies because \(|g_z|\le1\). The corresponding negative-base theorem statement was not independently source-matched in this audit.
 7. **Does anything substantive remain in the \(z\)-parameter itself?** Not at the level of existence or the degree-series formula for fixed real \(z\ge0\). Possible surviving work concerns joint analytic dependence on complex \(z\), uniformity, or the associated two-variable Euler product.
 8. **Is \(Z_a(s,z)\) already covered by standard Frobenian Euler-product theory?** Not literally by the finite-extension definition inspected. The weight depends on the infinite Kummer tower.
 9. **Would an expert regard the product as one-line packaging of known results?** Its definition for \(\Re(s)>1\) and its leading real boundary exponent are very close to packaging once Felix--Murty is known. Stronger continuation/factorisation claims are not one-line consequences of the inspected sources.

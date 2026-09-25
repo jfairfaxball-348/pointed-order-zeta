@@ -1,7 +1,7 @@
 {
   "project": "Pointed Order Zeta: Artin–Kummer Spectra of Reduction Orders",
-  "phase": "0_SCAFFOLD",
-  "status": "SCAFFOLD_COMPLETE",
+  "phase": "1_FOUNDATIONAL_DERIVATION",
+  "status": "FOUNDATIONS_PASS",
   "frozen_definitions": [
     "Initial base a is a nonzero integer, a != ±1, initially not a perfect power.",
     "For primes p not dividing a, ord_p(a) is the multiplicative order of a modulo p.",
@@ -11,22 +11,36 @@
     "Provisional spectrum: Delta_a(z) = lim_{x->infinity} (1/pi(x)) sum_{p<=x, p not dividing a} I_a(p)^(-z), whenever the limit exists.",
     "Kummer fields for the derivation target: K_n(a) = Q(zeta_n, a^(1/n)), subject to perfect-power and entanglement caveats."
   ],
+  "foundational_results": [
+    "For p not dividing a, ord_p(a) divides p-1 and I_a(p) is [F_p^x:<a>].",
+    "For n >= 1 and p not dividing a: n | I_a(p) iff n | (p-1) and a mod p is an n-th power in F_p^x.",
+    "For fixed n and p not dividing a*n: n | I_a(p) iff p splits completely in K_n(a)=Q(zeta_n,a^(1/n)).",
+    "The non-perfect-power hypothesis is not needed for the fixed-n splitting equivalence; it matters for degree formulas and later constants.",
+    "For fixed n, Chebotarev gives density 1/[K_n(a):Q] for n | I_a(p), up to a finite exceptional set.",
+    "For any arithmetic f, f(I_a(p)) = sum_{n | I_a(p)} (mu*f)(n), pointwise finitely.",
+    "For f_z(n)=n^(-z), g_z=mu*f_z is multiplicative and g_z(q^k)=q^(-kz)-q^(-(k-1)z).",
+    "For z=0, g_0 is epsilon; for fixed n, g_z(n) tends to mu(n) as z tends to +infinity.",
+    "For z >= 0 and Re(s)>1, the Euler product and logarithmic double series are absolutely controlled by zeta(Re(s))."
+  ],
   "open_questions": [
-    "Does generalized Artin/Chebotarev theory already imply existence and an explicit expansion for Delta_a(z)?",
-    "What is the exact splitting-field criterion equivalent to n | I_a(p), including exceptional primes and entanglement?",
-    "For which z does Delta_a(z) exist, and under what hypotheses?",
+    "Which generalized Artin / residual-index theorems already contain the fixed-n criterion and averages of general f(I_a(p))?",
+    "What exact formulas and uniform lower bounds are known for [Q(zeta_n,a^(1/n)):Q], including perfect-power cases?",
+    "What entanglement corrections are needed when degrees are factorized or several Kummer layers are combined?",
+    "What hypotheses justify exchanging the infinite Mobius expansion with the prime-density limit?",
+    "For which real or complex z does Delta_a(z) exist, and is its degree-series expression already standard?",
     "Does log Z_a(s,z) have leading singular coefficient Delta_a(z) as s -> 1+?",
-    "Is a fractional-power singularity genuinely present for generic z?",
     "Can Z_a(s,z), or a normalized/logarithmic-derivative variant, be factorized using Dedekind or Artin L-functions from the Kummer tower?",
     "Is I_a(p)^(-z) the most canonical transform of residual index?",
     "Does a nontrivial pointed algebraic-group or 1-motive generalization survive after the G_m case is understood?"
   ],
-  "killed_conjectures": [],
+  "killed_conjectures": [
+    "Naive shorthand: a mod p is an n-th power iff n divides I_a(p), without also requiring n divides p-1. This is false when n does not divide p-1."
+  ],
   "surviving_conjectures": [],
-  "literature_status": "NOT_STARTED_COMPREHENSIVELY; only a prior-art search plan exists.",
-  "computation_status": "NOT_STARTED; only an exact-computation plan exists.",
-  "proof_status": "NOT_STARTED; no theorem claims are made in Session 1.",
-  "next_session": "SESSION 2 — FOUNDATIONAL DERIVATION: verify elementary identities from scratch; derive the Mobius/Kummer splitting relation with precise hypotheses and caveats; add executable exact checks for small a and p; exit only as FOUNDATIONS_PASS, FOUNDATIONS_NEED_REPAIR, or OBJECT_COLLAPSES.",
-  "exit_state": "SCAFFOLD_COMPLETE",
+  "literature_status": "NOT_STARTED_COMPREHENSIVELY. Session 2 made only a targeted Chebotarev background check; the source-level novelty audit belongs to Session 3.",
+  "computation_status": "SESSION_2_EXACT_CHECKS_PASS: dependency-free exact multiplicative-order and residual-index tests pass, including composite n, n not dividing p-1, negative bases, and perfect-power bases.",
+  "proof_status": "FOUNDATIONAL_IDENTITIES_ESTABLISHED. Fixed-n Chebotarev is invoked as a standard theorem. Infinite degree-series convergence and interchange are unresolved.",
+  "next_session": "SESSION 3 — PRIOR-ART / NOVELTY AUDIT: search generalized Artin, near-primitive roots, residual-index distributions, averages of arithmetic functions of residual index, Kummer degree formulas, entanglement corrections, and convergence/interchange theorems against the precise Session-2 object. Do not begin later analytic/generalization phases.",
+  "exit_state": "FOUNDATIONS_PASS",
   "last_updated": "2026-09-25"
 }

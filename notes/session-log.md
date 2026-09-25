@@ -59,3 +59,93 @@ requires degree growth and a uniform tail/interchange theorem; fixed-\(n\) Chebo
 Exit state: **FOUNDATIONS_PASS**.
 
 Next session: source-level prior-art audit against the precise fixed-\(n\), Möbius, and Kummer-degree formulation established here.
+
+
+## Session 3 — Prior-art / novelty audit
+
+Date: 2026-09-25
+
+Scope honored: source-level prior-art audit. No large computational experiment, full singularity proof, elliptic/abelian generalization, 1-motive/Hodge/motivic development, Lean work, or paper drafting was begun.
+
+The audit found a major collision with established generalized-Artin theory.
+
+Standard terminology was confirmed: \(I_a(p)\) is the **residual index**, and the condition \(I_a(p)=t\) is the **near-primitive-root problem of index \(t\)**.
+
+Felix--Murty (2012), Lemma 2.1, states the fixed-\(n\) criterion
+\[
+n\mid i_a(p)
+\iff
+p\text{ splits completely in }\mathbf Q(\zeta_n,a^{1/n})
+\]
+as a classical result. Pappalardi (1995) gives the same base-\(2\) mechanism and attributes the splitting criterion to Dedekind.
+
+Exact residual-index densities are established generalized-Artin objects. Wagstaff's result, as reproduced in Moree's *Near-Primitive Roots*, gives under GRH
+\[
+\delta(a,t)
+=
+\sum_{n\ge1}
+\frac{\mu(n)}
+{[\mathbf Q(\zeta_{nt},a^{1/(nt)}):\mathbf Q]}.
+\]
+
+The strongest collision is Felix--Murty (2012), Theorem 1.7. Under GRH and broad growth conditions on \(g\), for
+\[
+f(n)=\sum_{d\mid n}g(d)
+\]
+they prove an asymptotic for
+\[
+\sum_{p\le x}f(i_a(p))
+\]
+whose constant is
+\[
+c_{a,f}
+=
+\sum_{d\ge1}
+\frac{g(d)}
+{[\mathbf Q(\zeta_d,a^{1/d}):\mathbf Q]}.
+\]
+For the project weight \(f_z(n)=n^{-z}\), Session 2 proved \(|g_z(n)|\le1\) for every real \(z>0\). Therefore the proposed \(\Delta_a(z)\) is an immediate specialization of this theorem, under the same GRH hypothesis.
+
+The degree issue from Session 2 is also standard. Felix--Murty Proposition 3.3 reproduces Wagstaff's exact formula
+\[
+[\mathbf Q(\zeta_n,a^{1/n}):\mathbf Q]
+=
+\frac{n\varphi(n)}
+{\varepsilon(n)(n,h)}
+\]
+with explicit perfect-power, sign, discriminant, and \(2\)-adic corrections, and Corollary 3.4 gives
+\[
+[\mathbf Q(\zeta_n,a^{1/n}):\mathbf Q]
+\asymp_a n\varphi(n).
+\]
+Hence the project's \(g_z\)-degree series converges absolutely for fixed real \(z>0\).
+
+Akbary--Fakhari (2024) explicitly formulates the same generalized-Artin constant and develops product/character-sum expressions for multiplicative \(g\). Lenstra--Moree--Stevenhagen (2014) provides the controlling interpretation of entanglement as a correction for dependencies among local splitting fields/Galois images.
+
+No direct primary source was located for the exact two-variable product
+\[
+Z_a(s,z)
+=
+\prod_{p\nmid a}(1-I_a(p)^{-z}p^{-s})^{-1}.
+\]
+However, its definition for \(\Re(s)>1\) is routine packaging, and the leading real \(s\to1^+\) logarithmic coefficient is strongly constrained by Felix--Murty's weighted prime asymptotic plus standard partial summation. Finite-Galois Frobenian/Chebotarev Euler-product theory exhibits the same mean-to-exponent mechanism, although the project weight depends on the full Kummer tower and is not shown to factor through a fixed finite Galois extension.
+
+The project is therefore reframed around a stronger analytic question: whether
+\[
+H_a(s,z)
+=
+Z_a(s,z)\zeta(s)^{-\Delta_a(z)}
+\]
+has genuinely nontrivial holomorphic/nonvanishing continuation, complex-\(z\) structure, or a convergent Artin/Dedekind-\(L\) factorization from the infinite Kummer tower.
+
+The word “spectrum” is demoted. At the \(\mathbf G_m\) mean-value level, \(\Delta_a(z)\) is more naturally a Dirichlet/Mellin transform of the residual-index distribution, equivalently a Laplace transform of \(\log I_a(p)\).
+
+Required outputs created:
+
+- \`notes/prior-art-matrix.md\`
+- \`notes/literature.md\`
+- \`literature/bibliography.bib\`
+
+Exit state: **PRIOR_ART_REFRAME**.
+
+Next session: proceed only in reframed form. Treat Felix--Murty Theorem 1.7 as controlling input and investigate the analytic infinite-Kummer Euler-product layer rather than rediscovering \(\Delta_a(z)\).

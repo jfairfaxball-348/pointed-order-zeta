@@ -1,0 +1,32 @@
+{
+  "project": "Pointed Order Zeta: Artin–Kummer Spectra of Reduction Orders",
+  "phase": "0_SCAFFOLD",
+  "status": "SCAFFOLD_COMPLETE",
+  "frozen_definitions": [
+    "Initial base a is a nonzero integer, a != ±1, initially not a perfect power.",
+    "For primes p not dividing a, ord_p(a) is the multiplicative order of a modulo p.",
+    "Residual index: I_a(p) = (p - 1) / ord_p(a) = [F_p^x : <a mod p>].",
+    "Starting Euler product: Z_a(s,z) = product_{p not dividing a} (1 - I_a(p)^(-z) p^(-s))^(-1).",
+    "Initial rigorous domain: real z >= 0 and Re(s) > 1; no analytic continuation is assumed.",
+    "Provisional spectrum: Delta_a(z) = lim_{x->infinity} (1/pi(x)) sum_{p<=x, p not dividing a} I_a(p)^(-z), whenever the limit exists.",
+    "Kummer fields for the derivation target: K_n(a) = Q(zeta_n, a^(1/n)), subject to perfect-power and entanglement caveats."
+  ],
+  "open_questions": [
+    "Does generalized Artin/Chebotarev theory already imply existence and an explicit expansion for Delta_a(z)?",
+    "What is the exact splitting-field criterion equivalent to n | I_a(p), including exceptional primes and entanglement?",
+    "For which z does Delta_a(z) exist, and under what hypotheses?",
+    "Does log Z_a(s,z) have leading singular coefficient Delta_a(z) as s -> 1+?",
+    "Is a fractional-power singularity genuinely present for generic z?",
+    "Can Z_a(s,z), or a normalized/logarithmic-derivative variant, be factorized using Dedekind or Artin L-functions from the Kummer tower?",
+    "Is I_a(p)^(-z) the most canonical transform of residual index?",
+    "Does a nontrivial pointed algebraic-group or 1-motive generalization survive after the G_m case is understood?"
+  ],
+  "killed_conjectures": [],
+  "surviving_conjectures": [],
+  "literature_status": "NOT_STARTED_COMPREHENSIVELY; only a prior-art search plan exists.",
+  "computation_status": "NOT_STARTED; only an exact-computation plan exists.",
+  "proof_status": "NOT_STARTED; no theorem claims are made in Session 1.",
+  "next_session": "SESSION 2 — FOUNDATIONAL DERIVATION: verify elementary identities from scratch; derive the Mobius/Kummer splitting relation with precise hypotheses and caveats; add executable exact checks for small a and p; exit only as FOUNDATIONS_PASS, FOUNDATIONS_NEED_REPAIR, or OBJECT_COLLAPSES.",
+  "exit_state": "SCAFFOLD_COMPLETE",
+  "last_updated": "2026-09-25"
+}

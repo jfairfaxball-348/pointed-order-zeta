@@ -142,9 +142,9 @@ The word “spectrum” is demoted. At the \(\mathbf G_m\) mean-value level, \(\
 
 Required outputs created:
 
-- \`notes/prior-art-matrix.md\`
-- \`notes/literature.md\`
-- \`literature/bibliography.bib\`
+- `notes/prior-art-matrix.md`
+- `notes/literature.md`
+- `literature/bibliography.bib`
 
 Exit state: **PRIOR_ART_REFRAME**.
 

@@ -1,7 +1,5 @@
 # Scripts
 
-Session 1 placeholder.
+Session 2 adds check_foundations.py, a small exact-arithmetic consistency check for the derived residual-index divisibility criterion.
 
-Future scripts may run reproducible exact computations, generate experiment tables, or validate derived identities. They must not silently encode mathematical assumptions that are absent from the notes.
-
-No research script is implemented during scaffold.
+It is deliberately diagnostic only: it does not estimate densities or support novelty claims. Larger computational experiments remain deferred to the computational-pilot gate.

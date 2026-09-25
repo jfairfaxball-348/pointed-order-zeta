@@ -1,7 +1,7 @@
 {
   "project": "Pointed Order Zeta: Artin–Kummer Spectra of Reduction Orders",
-  "phase": "1_FOUNDATIONAL_DERIVATION",
-  "status": "FOUNDATIONS_PASS",
+  "phase": "2_PRIOR_ART_NOVELTY_AUDIT",
+  "status": "PRIOR_ART_REFRAME",
   "frozen_definitions": [
     "Initial base a is a nonzero integer, a != ±1, initially not a perfect power.",
     "For primes p not dividing a, ord_p(a) is the multiplicative order of a modulo p.",
@@ -22,25 +22,41 @@
     "For z=0, g_0 is epsilon; for fixed n, g_z(n) tends to mu(n) as z tends to +infinity.",
     "For z >= 0 and Re(s)>1, the Euler product and logarithmic double series are absolutely controlled by zeta(Re(s))."
   ],
+  "prior_art_results": [
+    "Residual index i_a(p) is standard terminology; the fixed exact-index problem I_a(p)=t is the near-primitive-root problem.",
+    "Felix-Murty (2012), Lemma 2.1, records the fixed-n splitting criterion as classical: d | i_a(p) iff p splits completely in Q(zeta_d,a^(1/d)), away from the usual exceptional primes.",
+    "Felix-Murty (2012), Theorem 1.7, gives under GRH fixed-base asymptotics for a broad class of f(i_a(p)) and identifies the constant as sum_d g(d)/[Q(zeta_d,a^(1/d)):Q], where f=1*g.",
+    "For each fixed real z>0, Session-2 gives |g_z(n)|<=1, so Felix-Murty Theorem 1.7 immediately yields the proposed Delta_a(z) and its Kummer-degree series under their GRH hypothesis.",
+    "Wagstaff's exact degree formula, reproduced in Felix-Murty Proposition 3.3, gives [Q(zeta_n,a^(1/n)):Q] asymptotic_a n*phi(n), including explicit perfect-power, sign, discriminant, and 2-adic corrections.",
+    "Consequently sum_n |g_z(n)|/[K_n(a):Q] converges absolutely for every fixed real z>0; the prime-average interchange still requires effective uniformity and is supplied conditionally by Felix-Murty.",
+    "Akbary-Fakhari (2024) explicitly formulates the same generalized-Artin Kummer-degree constant and gives product/character-sum expressions for multiplicative weights, including g_z once convergence is checked.",
+    "Lenstra-Moree-Stevenhagen (2014) identifies entanglement with dependencies among local splitting fields and associated correction factors; it does not alter the individual fixed-n splitting criterion.",
+    "No direct primary source was located for the exact two-variable product Z_a(s,z); finite-Galois Frobenian/Chebotarev Euler-product theory is adjacent but does not literally contain the infinite-Kummer weight I_a(p)^(-z).",
+    "The leading real s->1+ logarithmic coefficient is largely packaging once the Felix-Murty weighted prime asymptotic is taken as input; stronger continuation, nonvanishing, complex-z dependence, and Kummer-tower L-factorization remain possible questions."
+  ],
   "open_questions": [
-    "Which generalized Artin / residual-index theorems already contain the fixed-n criterion and averages of general f(I_a(p))?",
-    "What exact formulas and uniform lower bounds are known for [Q(zeta_n,a^(1/n)):Q], including perfect-power cases?",
-    "What entanglement corrections are needed when degrees are factorized or several Kummer layers are combined?",
-    "What hypotheses justify exchanging the infinite Mobius expansion with the prime-density limit?",
-    "For which real or complex z does Delta_a(z) exist, and is its degree-series expression already standard?",
-    "Does log Z_a(s,z) have leading singular coefficient Delta_a(z) as s -> 1+?",
-    "Can Z_a(s,z), or a normalized/logarithmic-derivative variant, be factorized using Dedekind or Artin L-functions from the Kummer tower?",
-    "Is I_a(p)^(-z) the most canonical transform of residual index?",
-    "Does a nontrivial pointed algebraic-group or 1-motive generalization survive after the G_m case is understood?"
+    "Does the normalized infinite-Kummer Euler product H_a(s,z)=Z_a(s,z) zeta(s)^(-Delta_a(z)) admit a holomorphic and nonvanishing continuation beyond Re(s)>1 for fixed z?",
+    "What is the best half-plane of continuation for H_a(s,z), conditionally or unconditionally?",
+    "Can Z_a(s,z) or H_a(s,z) be expressed as a convergent product/quotient of Dedekind or Artin L-functions attached to the Kummer tower?",
+    "For which complex z can Delta_a(z), Z_a(s,z), and any normalized factor be treated uniformly or holomorphically?",
+    "Does an infinite-tower L-factorization introduce natural boundaries or secondary singularities not visible from the mean value alone?",
+    "Is the frozen local factor (1-I_a(p)^(-z)p^(-s))^(-1) analytically useful enough to justify retaining Z_a(s,z), or should a logarithmic derivative or another transform replace it?",
+    "What parts, if any, of a pointed algebraic-group or 1-motive generalization remain nontrivial after the G_m generalized-Artin collision?"
   ],
   "killed_conjectures": [
-    "Naive shorthand: a mod p is an n-th power iff n divides I_a(p), without also requiring n divides p-1. This is false when n does not divide p-1."
+    "Naive shorthand: a mod p is an n-th power iff n divides I_a(p), without also requiring n divides p-1. This is false when n does not divide p-1.",
+    "Candidate novelty of the fixed-n Kummer splitting mechanism: it is classical generalized-Artin machinery.",
+    "Candidate novelty of the general Mobius/Kummer mean-value constant: Felix-Murty proves this framework, and Akbary-Fakhari explicitly develops the corresponding constants.",
+    "Candidate novelty of Delta_a(z) for fixed real z>0 as a new residual-index mean: it is an immediate specialization of Felix-Murty Theorem 1.7 under GRH.",
+    "Candidate novelty of the word 'spectrum' at the G_m mean-value level: the object is more naturally a Dirichlet/Mellin transform of the residual-index distribution, equivalently a Laplace transform of log I_a(p)."
   ],
-  "surviving_conjectures": [],
-  "literature_status": "NOT_STARTED_COMPREHENSIVELY. Session 2 made only a targeted Chebotarev background check; the source-level novelty audit belongs to Session 3.",
-  "computation_status": "SESSION_2_EXACT_CHECKS_PASS: dependency-free exact multiplicative-order and residual-index tests pass, including composite n, n not dividing p-1, negative bases, and perfect-power bases.",
-  "proof_status": "FOUNDATIONAL_IDENTITIES_ESTABLISHED. Fixed-n Chebotarev is invoked as a standard theorem. Infinite degree-series convergence and interchange are unresolved.",
-  "next_session": "SESSION 3 — PRIOR-ART / NOVELTY AUDIT: search generalized Artin, near-primitive roots, residual-index distributions, averages of arithmetic functions of residual index, Kummer degree formulas, entanglement corrections, and convergence/interchange theorems against the precise Session-2 object. Do not begin later analytic/generalization phases.",
-  "exit_state": "FOUNDATIONS_PASS",
+  "surviving_conjectures": [
+    "Potential reframed target only: the normalized infinite-Kummer weighted Euler product may possess analytic continuation, nonvanishing, complex-z structure, or an L-function factorization not automatic from known generalized-Artin mean-value results. No novelty claim is made."
+  ],
+  "literature_status": "SESSION_3_COMPLETE: source-level audit found direct collisions for residual-index distribution and general f(i_a(p)) averages, and an immediate-corollary collision for f_z(n)=n^(-z). Required matrix, narrative, and bibliography have been created. Exact Z_a(s,z) was not located, but its leading real singular coefficient is strongly constrained by known weighted-prime asymptotics.",
+  "computation_status": "SESSION_2_EXACT_CHECKS_PASS. No large Session-3 computation was performed, in accordance with scope.",
+  "proof_status": "FOUNDATIONAL_IDENTITIES_ESTABLISHED. PRIOR ART NOW CONTROLS THE MEAN: under the GRH hypotheses of Felix-Murty Theorem 1.7, Delta_a(z) exists for each fixed real z>0 and equals the Kummer-degree series. Wagstaff's degree formula gives absolute convergence of that series. No Session-3 theorem about analytic continuation of Z_a(s,z) was claimed.",
+  "next_session": "SESSION 4 — REFRAMED COMPUTATIONAL/ANALYTIC PILOT ONLY: take generalized-Artin theory for Delta_a(z) as controlling input and test the normalized infinite-Kummer Euler product H_a(s,z)=Z_a(s,z) zeta(s)^(-Delta_a(z)), including numerical stabilization near s=1 and candidate L-function/tower factorizations. Do not present Delta_a(z), the residual-index distribution, or the Kummer-degree constant as new.",
+  "exit_state": "PRIOR_ART_REFRAME",
   "last_updated": "2026-09-25"
 }

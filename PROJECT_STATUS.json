@@ -26,7 +26,7 @@
     "Residual index i_a(p) is standard terminology; the fixed exact-index problem I_a(p)=t is the near-primitive-root problem.",
     "Felix-Murty (2012), Lemma 2.1, records the fixed-n splitting criterion as classical: d | i_a(p) iff p splits completely in Q(zeta_d,a^(1/d)), away from the usual exceptional primes.",
     "Felix-Murty (2012), Theorem 1.7, gives under GRH fixed-base asymptotics for a broad class of f(i_a(p)) and identifies the constant as sum_d g(d)/[Q(zeta_d,a^(1/d)):Q], where f=1*g.",
-    "For each fixed real z>0, Session-2 gives |g_z(n)|<=1, so Felix-Murty Theorem 1.7 immediately yields the proposed Delta_a(z) and its Kummer-degree series under their GRH hypothesis.",
+    "For each fixed real z>0, Session-2 gives |g_z(n)|<=1, so Felix-Murty Theorem 1.7 immediately yields the proposed Delta_a(z) and its Kummer-degree series under GRH in the paper's standing positive-base setup. The negative-base extension of this general weighted theorem was not independently source-matched in Session 3.",
     "Wagstaff's exact degree formula, reproduced in Felix-Murty Proposition 3.3, gives [Q(zeta_n,a^(1/n)):Q] asymptotic_a n*phi(n), including explicit perfect-power, sign, discriminant, and 2-adic corrections.",
     "Consequently sum_n |g_z(n)|/[K_n(a):Q] converges absolutely for every fixed real z>0; the prime-average interchange still requires effective uniformity and is supplied conditionally by Felix-Murty.",
     "Akbary-Fakhari (2024) explicitly formulates the same generalized-Artin Kummer-degree constant and gives product/character-sum expressions for multiplicative weights, including g_z once convergence is checked.",
@@ -35,6 +35,7 @@
     "The leading real s->1+ logarithmic coefficient is largely packaging once the Felix-Murty weighted prime asymptotic is taken as input; stronger continuation, nonvanishing, complex-z dependence, and Kummer-tower L-factorization remain possible questions."
   ],
   "open_questions": [
+    "Does Felix-Murty Theorem 1.7, or a later theorem of equal generality, explicitly cover negative integer bases a for general f(i_a(p))? The degree and exact-index machinery do cover negative a, but the weighted theorem's negative-base hypothesis should be source-matched before use.",
     "Does the normalized infinite-Kummer Euler product H_a(s,z)=Z_a(s,z) zeta(s)^(-Delta_a(z)) admit a holomorphic and nonvanishing continuation beyond Re(s)>1 for fixed z?",
     "What is the best half-plane of continuation for H_a(s,z), conditionally or unconditionally?",
     "Can Z_a(s,z) or H_a(s,z) be expressed as a convergent product/quotient of Dedekind or Artin L-functions attached to the Kummer tower?",
@@ -55,7 +56,7 @@
   ],
   "literature_status": "SESSION_3_COMPLETE: source-level audit found direct collisions for residual-index distribution and general f(i_a(p)) averages, and an immediate-corollary collision for f_z(n)=n^(-z). Required matrix, narrative, and bibliography have been created. Exact Z_a(s,z) was not located, but its leading real singular coefficient is strongly constrained by known weighted-prime asymptotics.",
   "computation_status": "SESSION_2_EXACT_CHECKS_PASS. No large Session-3 computation was performed, in accordance with scope.",
-  "proof_status": "FOUNDATIONAL_IDENTITIES_ESTABLISHED. PRIOR ART NOW CONTROLS THE MEAN: under the GRH hypotheses of Felix-Murty Theorem 1.7, Delta_a(z) exists for each fixed real z>0 and equals the Kummer-degree series. Wagstaff's degree formula gives absolute convergence of that series. No Session-3 theorem about analytic continuation of Z_a(s,z) was claimed.",
+  "proof_status": "FOUNDATIONAL_IDENTITIES_ESTABLISHED. PRIOR ART CONTROLS THE MEAN FOR THE SOURCE-MATCHED POSITIVE-BASE CASE: under the GRH hypotheses of Felix-Murty Theorem 1.7, Delta_a(z) exists for each fixed real z>0 and equals the Kummer-degree series. Wagstaff's degree formula gives absolute convergence for arbitrary integer a != 0,±1. The negative-base extension of the general weighted theorem remains to be source-matched precisely. No Session-3 theorem about analytic continuation of Z_a(s,z) was claimed.",
   "next_session": "SESSION 4 — REFRAMED COMPUTATIONAL/ANALYTIC PILOT ONLY: take generalized-Artin theory for Delta_a(z) as controlling input and test the normalized infinite-Kummer Euler product H_a(s,z)=Z_a(s,z) zeta(s)^(-Delta_a(z)), including numerical stabilization near s=1 and candidate L-function/tower factorizations. Do not present Delta_a(z), the residual-index distribution, or the Kummer-degree constant as new.",
   "exit_state": "PRIOR_ART_REFRAME",
   "last_updated": "2026-09-25"

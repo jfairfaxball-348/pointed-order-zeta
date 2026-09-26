@@ -119,6 +119,15 @@ Z_{a,X}(s,0)
 \]
 This is also a unit test. It confirms that the full-zeta normalization leaves precisely the expected finite omitted-prime factor.
 
+The code now also implements the matched omitted-prime normalization
+\[
+\widehat H_{a,X}(s,z)
+=
+Z_{a,X}(s,z)
+\left(\prod_{\substack{p\le X\\p\nmid a}}(1-p^{-s})^{-1}\right)^{-\Delta_a(z)}.
+\]
+At \(z=0\), its logarithm is exactly zero once the cutoff includes the relevant primes, so \(\widehat H_{a,X}(s,0)=1\). This makes the finite-factor convention executable rather than merely notational; it does not change the continuation problem.
+
 ## 5. Leading singularity diagnostic and the cutoff trap
 
 A finite Z_{a,X} should not be combined naively with the full zeta(s) when s is close to 1. The missing prime tail of Z_{a,X} is then unmatched and can dominate the display.

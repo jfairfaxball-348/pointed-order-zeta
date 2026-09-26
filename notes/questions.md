@@ -50,38 +50,124 @@ This is a live question bank, not a conjecture list.
 - **Does degree growth alone justify summing those separated \(L\)-expressions over the tower?** No. The reorganization loses the divisor-support convergence mechanism; a new uniform estimate or cancellation mechanism is required.
 - **What does complex \(z\) add at the degree-series level?** For positive non-perfect-power \(a\), the Kummer degree series converges absolutely and locally uniformly for \(\Re(z)>-1\). This does not establish a complex-\(z\) prime-average theorem.
 
-## Highest-priority surviving question
+## Continuation proof — resolved or obstructed in Session 5
 
-The Euler product is no longer the preferred primitive object. Define
+- The clean proof object is
+  \[
+  Q_a^\circ(s,z)
+  =
+  \sum_{p\nmid a}
+  \bigl(I_a(p)^{-z}-\Delta_a(z)\bigr)p^{-s},
+  \]
+  which differs from the frozen \(Q_a(s,z)\) by the finite entire term
+  \[
+  -\Delta_a(z)\sum_{p\mid a}p^{-s}.
+  \]
+- In \(\Re(s)>1\), the centered Kummer expansion is exact and absolutely convergent:
+  \[
+  Q_a^\circ(s,z)
+  =
+  \sum_{n\ge1}g_z(n)
+  \left(
+  S_{a,n}(s)-\frac{1}{[K_n(a):\mathbf Q]}P_a^\circ(s,0)
+  \right).
+  \]
+- At each fixed finite Galois level,
+  \[
+  C_K(s)
+  =
+  P_{\rm split}(s;K)-\frac1{[K:\mathbf Q]}P(s)
+  \]
+  has the exact representation
+  \[
+  C_K(s)
+  =
+  \frac1{[K:\mathbf Q]}
+  \log\!\left(\frac{\zeta_K(s)}{\zeta(s)}\right)
+  -
+  B_K(s),
+  \]
+  where \(B_K\) is holomorphic for \(\Re(s)>1/2\). The trivial character and the \(s=1\) pole cancel exactly.
+- Aramata--Brauer gives local continuation of every fixed \(C_K\) through \(s=1\) unconditionally. Under Dedekind GRH, each fixed level is holomorphic on \(\Re(s)>1/2\).
+- For positive non-perfect-power \(a\),
+  \[
+  \log|\operatorname{Disc}(K_n(a))|
+  \le
+  [K_n(a):\mathbf Q](3\log n+\log a).
+  \]
+- Under GRH,
+  \[
+  \pi_n(x)
+  =
+  \frac{\operatorname{li}(x)}{[K_n(a):\mathbf Q]}
+  +
+  O_a(\sqrt{x}\log(nx)),
+  \]
+  and hence on compact subsets of \(\Re(s)>1/2\),
+  \[
+  C_{K_n(a)}(s)=O_{a,\Omega}(\log(2n)).
+  \]
+- This finite-level bound is not summable over the tower against \(g_z\), since for prime \(q\),
+  \[
+  |g_z(q)|=1-q^{-z}\to1.
+  \]
+  This proves failure of the standard locally-uniform absolute-convergence argument; it does not prove divergence of the actual tower.
+- The logarithmic derivative removes branch choices but does not improve tower convergence.
+- A moving truncation reproduces the Felix--Murty logarithmic discrepancy. The finite Chebotarev part and Kummer-degree mean tail could formally balance at \(N=x^{1/4}\), but the prime-supported large-divisor tail has no available power-saving bound there.
+- No Level-2 or Level-3 continuation of the full \(Q_a\) was proved.
+
+## Highest-priority surviving question after Session 5
+
+For fixed positive non-perfect-power \(a\) and real \(z>0\), can one obtain a genuine power saving by preserving cancellation across the Kummer tower rather than summing finite-level absolute bounds?
+
+A concrete target is to prove, for some \(\alpha,\delta>0\), a centered estimate of the form
 \[
-P_a(s,z)=\sum_{p\nmid a}I_a(p)^{-z}p^{-s},
-\qquad
-P(s)=\sum_p p^{-s},
+\sum_{n\le x^\alpha}
+g_z(n)
+\left(
+\pi_n(x)-\frac{\operatorname{li}(x)}{[K_n(a):\mathbf Q]}
+\right)
++
+\mathcal T_z(x;x^\alpha)
+-
+\operatorname{li}(x)
+\sum_{n>x^\alpha}
+\frac{g_z(n)}{[K_n(a):\mathbf Q]}
+=
+O(x^{1-\delta}),
 \]
-and
+where
 \[
-\boxed{Q_a(s,z)=P_a(s,z)-\Delta_a(z)P(s).}
+\mathcal T_z(x;N)
+=
+\sum_{\substack{p\le x\\p\nmid a}}
+\sum_{\substack{n\mid I_a(p)\\n>N}}g_z(n).
 \]
-
-The theorem-sized question for the next session is:
-
-> For fixed positive non-perfect-power \(a\) and fixed real \(z>0\), under a precisely stated GRH package, does \(Q_a(s,z)\) admit holomorphic continuation to any half-plane \(\Re(s)>1-\delta\) with \(\delta>0\)? If so, can this be obtained from a uniformly convergent Kummer-tower Artin/Dedekind-\(L\) expansion or from a logarithmic-derivative variant?
 
 Subquestions:
 
-- What conductor/discriminant bounds for \(K_n(a)\) are strong enough to control the \(n\)-sum after finite-level character decomposition?
-- Is the logarithmic derivative more natural because it removes branch choices for \(\log L(s,\chi)\)?
-- Can tower-level cancellation preserve the original divisor-support convergence after reorganization?
-- Does any valid continuation reveal secondary singularities or a natural boundary?
-- Is there a useful complex-\(z\) weighted prime theorem, rather than merely a holomorphic parameter in the degree series?
+- Can a large sieve for Frobenius, a zero-density theorem, or an explicit-formula argument give cancellation in the finite-level \(n\)-sum beyond
+  \[
+  O_a(\sqrt{x}N\log(Nx))?
+  \]
+- Can the divisor-supported tail \(\mathcal T_z(x;N)\) be centered with a power saving for any power-sized \(N=x^\alpha\)?
+- Is smoothing in \(x\) enough to expose such cancellation, and can smoothing then be removed or converted to continuation of \(Q_a\)?
+- Can the scalar cancellation encoded by
+  \[
+  \sum_{n\ge1}\frac{g_z(n)}{n^w}
+  =
+  \frac{\zeta(w+z)}{\zeta(w)}
+  \]
+  be transferred to the nonmultiplicative family \(C_{K_n}(s)\)?
+- Could \(Q_a(s,z)\) continue across \(\Re(s)=1\) by a mechanism not visible from Kummer-level separation?
 - Does Felix--Murty Theorem 1.7, or a later theorem of equal generality, explicitly cover negative integer bases for general \(f(i_a(p))\)?
 
 ## Deferred generalisation
 
 Elliptic curves, abelian varieties, 1-motives, Hodge theory, Lean, and paper work remain outside the current gate.
 
-## Session-4 gate
+## Session-5 gate
 
-Exit state: **ANALYTIC_PILOT_REFRAME**.
+Exit state: **CONTINUATION_PROOF_OBSTRUCTED**.
 
-Session 5 should proceed only in reframed mathematical-proof form around \(Q_a(s,z)\) and the tower continuation problem. The Level-1 real boundary asymptotic is no longer a research target.
+Session 6 may proceed only in reframed proof form around tower-averaged cancellation / power-saving divisor-support estimates. Do not repeat the naively separated infinite \(L\)-function expansion, and do not infer a natural boundary from its failure.

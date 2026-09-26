@@ -144,3 +144,42 @@ No Level-3 theorem is established.
 
 **method obstruction** — a rigorous demonstration that a specified proof strategy cannot close using the available estimates. Session 5 proves a method obstruction for the termwise Kummer/Chebotarev/\(L\)-function absolute-convergence route. Do not abbreviate this to “non-continuation” or “natural boundary.”
 
+
+
+## Session-6 closure terminology
+
+**profinite Kummer tower** — the inverse-limit Galois system attached to
+\[
+L_a=\bigcup_{n\ge1}K_n(a),
+\qquad
+G_a=\operatorname{Gal}(L_a/\mathbf Q).
+\]
+Use this only as a structural/probabilistic model; it does not by itself imply effective prime equidistribution.
+
+**lcm compositum law** — the exact identity
+\[
+K_m(a)K_n(a)=K_{\operatorname{lcm}(m,n)}(a).
+\]
+It implies the exact covariance kernel for centered splitting indicators.
+
+**lcm covariance kernel** — for
+\[
+U_n=\operatorname{Gal}(L_a/K_n(a)),\qquad d_n=[K_n(a):\mathbf Q],
+\]
+the Haar covariance
+\[
+\frac1{d_{\operatorname{lcm}(m,n)}}-\frac1{d_md_n}.
+\]
+
+**Haar-\(L^2\) residual-index observable** — the Session-6 in-project function
+\[
+\sum_{n\ge1}g_z(n)
+\left(
+\mathbf1_{U_n}-\frac1{d_n}
+\right),
+\]
+which converges in \(L^2(G_a)\) for fixed real \(z>0\), with polynomially decaying \(L^2\) tail. This is a profinite theorem, not a prime-discrepancy theorem.
+
+**prime-side \(L^2\) bridge** — informal name for the missing effective theorem that would transfer Haar \(L^2\) cancellation to prime Frobenius elements uniformly at growing Kummer depth. No such theorem was established or source-matched.
+
+**PILOT_KILL** — final project state after Session 6. It means the active mathematical research programme is closed under the adopted go/no-go standard. It does not mean the residual-index object is false, uninteresting, or non-continuable.

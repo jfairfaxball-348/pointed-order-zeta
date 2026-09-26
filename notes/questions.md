@@ -171,3 +171,45 @@ Elliptic curves, abelian varieties, 1-motives, Hodge theory, Lean, and paper wor
 Exit state: **CONTINUATION_PROOF_OBSTRUCTED**.
 
 Session 6 may proceed only in reframed proof form around tower-averaged cancellation / power-saving divisor-support estimates. Do not repeat the naively separated infinite \(L\)-function expansion, and do not infer a natural boundary from its failure.
+
+
+## Session 6 — pilot closed
+
+Exit state: **PILOT_KILL**.
+
+The former highest-priority continuation question is no longer an active Pointed Order Zeta project target.
+
+Session 6 found the exact nested-tower law
+\[
+K_m(a)K_n(a)=K_{\operatorname{lcm}(m,n)}(a)
+\]
+and the Haar covariance
+\[
+\left\langle
+\mathbf1_{U_m}-\frac1{d_m},
+\mathbf1_{U_n}-\frac1{d_n}
+\right\rangle
+=
+\frac1{d_{\operatorname{lcm}(m,n)}}-\frac1{d_md_n}.
+\]
+This yields an unconditional profinite \(L^2\) residual-index observable with tail
+\[
+O_{a,\varepsilon}(N^{-1/2+\varepsilon}).
+\]
+
+However, no audited theorem transfers that \(L^2\) saving effectively to prime Frobenius elements at power-sized tower depth. The signed divisor tail is also not intrinsically small: for prime \(q>N\),
+\[
+\sum_{\substack{n\mid q\\n>N}}g_z(n)=q^{-z}-1.
+\]
+
+The exact-index basis, large \(z\), \(z=1,2\), smoothing, large-sieve-for-Frobenius results, and zero-density/averaged-Chebotarev results did not remove the obstruction.
+
+### Standalone questions retained after closure
+
+These are not mandates for another Pointed Order Zeta session:
+
+- Can the Haar-\(L^2\) lcm-covariance model be developed abstractly for generalized-Artin/Kummer systems?
+- Can effective prime equidistribution ever be proved for such \(L^2\) observables at growing level?
+- Does a source explicitly extend the full Felix--Murty weighted theorem to negative integer bases?
+
+No Session 7 is authorized by this question bank.

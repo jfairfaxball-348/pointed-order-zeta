@@ -123,6 +123,25 @@ def matched_log_h(data, primes, s, z, delta, cutoff=None) -> complex:
     return log_z(data, s, z, x) - delta * log_zeta_prime_product(primes, s, x)
 
 
+def log_zeta_prime_product_excluding_base(primes, s: complex, cutoff: int, a: int) -> complex:
+    """Truncated zeta Euler product with the primes dividing a omitted."""
+    total = 0j
+    for p in primes:
+        if p > cutoff:
+            break
+        if a % p:
+            total -= cmath.log(1 - cmath.exp(-s * math.log(p)))
+    return total
+
+
+def matched_log_h_omitted(data, primes, s, z, delta, cutoff=None) -> complex:
+    """Matched-cutoff normalization by zeta_a(s), omitting primes dividing a."""
+    x = data.cutoff if cutoff is None else cutoff
+    return log_z(data, s, z, x) - delta * log_zeta_prime_product_excluding_base(
+        primes, s, x, data.base
+    )
+
+
 @lru_cache(maxsize=None)
 def maximal_power_exponent(a: int) -> int:
     h = 0

@@ -26,7 +26,7 @@ Run from the repository root:
     python -m unittest discover -s tests -v
     python scripts/run_analytic_pilot.py
 
-The full suite contains 12 passing tests.
+The full suite contains 13 passing tests.
 
 Default cutoffs are
 \[

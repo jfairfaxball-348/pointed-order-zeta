@@ -78,7 +78,7 @@ This is only a Level-1 real boundary asymptotic. It does not prove holomorphic c
 
 The exact Session-2 arithmetic code has been extended with sieve-backed prime/factor data, exact residual indices, prime Dirichlet sums, logarithmic Euler products, the source-matched positive non-perfect-power Kummer degree formula, complex-z diagnostics, and matched-cutoff normalization.
 
-Default reproducible pilot parameters are \(X=10^6\) and \(N=5\times10^5\), with bases \(2,3,5,6,10\). The full unit-test suite has 12 passing tests. Results and reproducibility details are in notes/computational-pilot.md.
+Default reproducible pilot parameters are \(X=10^6\) and \(N=5\times10^5\), with bases \(2,3,5,6,10\). The full unit-test suite has 13 passing tests. Results and reproducibility details are in notes/computational-pilot.md.
 
 ## What survives
 

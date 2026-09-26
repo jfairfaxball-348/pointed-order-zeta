@@ -1,7 +1,7 @@
 {
   "project": "Pointed Order Zeta: Artin–Kummer Spectra of Reduction Orders",
-  "phase": "3_REFRAMED_COMPUTATIONAL_ANALYTIC_PILOT",
-  "status": "ANALYTIC_PILOT_REFRAME",
+  "phase": "4_REFRAMED_MATHEMATICAL_PROOF",
+  "status": "CONTINUATION_PROOF_OBSTRUCTED",
   "frozen_definitions": [
     "Initial base a is a nonzero integer, a != ±1, initially not a perfect power.",
     "For primes p not dividing a, ord_p(a) is the multiplicative order of a modulo p.",
@@ -51,21 +51,37 @@
     "Candidate novelty of Delta_a(z) for fixed real z>0 as a residual-index mean.",
     "Candidate novelty of the leading real singular exponent of Z_a(s,z): under the Felix-Murty error it is a routine partial-summation consequence.",
     "Candidate that the k>=2 part of log Z carries the hard continuation problem: it is holomorphic for Re(s)>1/2.",
-    "Candidate that degree growth alone makes the naively separated infinite Kummer-tower L-product converge."
+    "Candidate that degree growth alone makes the naively separated infinite Kummer-tower L-product converge.",
+    "Candidate that exact finite-level centering plus Dedekind GRH is by itself enough to sum the continued Kummer tower.",
+    "Candidate that Artin holomorphy, even together with Artin GRH, automatically restores the missing tower decay.",
+    "Candidate that passing to the logarithmic derivative repairs the Kummer-tower convergence problem."
   ],
   "open_questions": [
-    "Does Felix-Murty Theorem 1.7, or a later theorem of equal generality, explicitly cover negative integer bases for general f(i_a(p))?",
-    "For fixed positive non-perfect-power a and real z>0, does Q_a(s,z)=P_a(s,z)-Delta_a(z)P(s) continue holomorphically to any region Re(s)>1-delta with delta>0?",
-    "Can the finite-level Artin/Dedekind L identities be reorganized over the Kummer tower with uniform conductor/discriminant control that preserves convergence?",
-    "Is the logarithmic derivative a better tower-level object because it removes branch choices in logarithms of L-functions?",
-    "Can a complex-z weighted prime theorem be proved in a useful domain, and is any such domain stronger than the elementary holomorphic degree-series parameterization?",
-    "Does any continuation exhibit genuine secondary singularities or a natural boundary?"
+    "Can one prove a tower-averaged power-saving estimate for sum_{n<=N} g_z(n)(pi_n(x)-li(x)/[K_n(a):Q]) with N=x^alpha for some alpha>0?",
+    "Can the prime-supported large-divisor tail sum_{p<=x} sum_{n|I_a(p), n>N} g_z(n) be centered and bounded by O(x^(1-delta)) for a power-sized N?",
+    "Is there a large-sieve-for-Frobenius, zero-density, or explicit-formula theorem genuinely uniform for this nested unbounded-degree Kummer family that supplies cancellation across n?",
+    "Can a smoothed version of the tower discrepancy be proved with a power saving and then converted into Level-2 or Level-3 continuation of Q_a?",
+    "Could Q_a(s,z) continue across Re(s)=1 for reasons not visible in the separated Kummer tower?",
+    "Does Felix-Murty Theorem 1.7, or a later theorem of equal generality, explicitly cover negative integer bases for general f(i_a(p))?"
   ],
-  "surviving_target": "The preferred analytic object is the centered weighted prime Dirichlet series Q_a(s,z)=P_a(s,z)-Delta_a(z)P(s). H_a remains useful packaging because log H differs from Q_a by a function holomorphic for Re(s)>1/2.",
-  "literature_status": "SESSION_3_CONTROLLING_PRIOR_ART_RETAINED. Session 4 used only targeted source matching: Felix-Murty Theorem 1.7 supplies any fixed beta<2 in the source-matched positive-base GRH setting; no source was found or assumed that automatically supplies complex continuation of the centered infinite-Kummer prime series.",
+  "surviving_target": "Q_a(s,z) remains the primary analytic object, with the omitted-prime equivalent Q_a^circ(s,z) preferred for proofs. The next theorem-sized target is a tower-averaged power-saving centered Kummer discrepancy that preserves the original divisor-support structure.",
+  "literature_status": "SESSION_3_CONTROLLING_PRIOR_ART_RETAINED. Session 5 added only targeted proof sources: Serre/Felix-Murty for effective Chebotarev and discriminant control, Aramata-Brauer for the finite-level zeta quotient, and the conductor-discriminant formula. No theorem was located that supplies the required power-saving weighted Kummer-tower discrepancy.",
   "computation_status": "SESSION_4_REPRODUCIBLE_PILOT_PASS: 13 unit tests pass; the driver reproduces the X<=1e6 and N<=5e5 diagnostics documented in notes/computational-pilot.md.",
-  "proof_status": "LEVEL_1_BOUNDARY_ESTABLISHED_CONDITIONALLY: under the Felix-Murty GRH hypotheses for positive a and fixed real z>0, H_a(s,z) has a finite positive real limit as s->1+. R_a is unconditionally holomorphic for Re(s)>1/2. No Level-2 or Level-3 continuation theorem is established.",
-  "next_session": "SESSION 5 SHOULD PROCEED IN REFRAMED MATHEMATICAL-PROOF FORM: study holomorphic continuation of Q_a(s,z) and whether finite-level L-function identities can be summed uniformly over the Kummer tower. Do not re-prove the Level-1 boundary constant or treat it as novelty.",
-  "exit_state": "ANALYTIC_PILOT_REFRAME",
-  "last_updated": "2026-09-26"
+  "proof_status": "SESSION_5_OBSTRUCTION_PROVED: finite centered Chebotarev levels continue across s=1 and, under Dedekind GRH, to Re(s)>1/2, but the strongest tower-uniform bound is O(log n), nonsummable against g_z. Existing moving-truncation tail technology recovers only logarithmic prime discrepancy. No Level-2 or Level-3 continuation of the full Q_a is established.",
+  "next_session": "SESSION 6 MAY PROCEED IN REFRAMED PROOF FORM ONLY: target tower-averaged cancellation and a power-saving divisor-supported tail (possibly first in a smoothed formulation). Do not repeat the infinite L-function factorization route or infer non-continuation from its failure.",
+  "exit_state": "CONTINUATION_PROOF_OBSTRUCTED",
+  "last_updated": "2026-09-26",
+  "session5_proof_results": [
+    "The analytically clean proof object is the omitted-prime centered series Q_a^circ(s,z)=sum_{p not dividing a}(I_a(p)^(-z)-Delta_a(z))p^(-s), which differs from Q_a by a finite entire Dirichlet polynomial.",
+    "For Re(s)>1, Q_a^circ has an exact absolutely convergent centered Kummer expansion sum_n g_z(n)(S_{a,n}(s)-P_a^circ(s,0)/[K_n(a):Q]).",
+    "For a finite Galois K/Q, centering deletes the trivial regular-character contribution exactly: C_K(s)=(1/[K:Q]) log(zeta_K(s)/zeta(s))-B_K(s), with B_K holomorphic for Re(s)>1/2.",
+    "Aramata-Brauer makes zeta_K/zeta entire and nonzero at s=1. Thus each fixed centered Chebotarev level continues through a K-dependent neighborhood of s=1 unconditionally; under Dedekind GRH it is holomorphic on Re(s)>1/2.",
+    "For positive non-perfect-power a, log |Disc(K_n(a))| <= [K_n(a):Q](3 log n + log a), and the root discriminant is at most a*n^3.",
+    "Under GRH for zeta_{K_n(a)}, Felix-Murty/Serre gives pi_n(x)=li(x)/[K_n(a):Q]+O_a(sqrt(x) log(nx)), uniformly with explicit n-dependence.",
+    "On compact subsets of Re(s)>1/2, the centered finite-level series satisfies C_{K_n(a)}(s)=O_{a,Omega}(log(2n)). This bound is not summable against g_z because |g_z(q)|=1-q^(-z) tends to 1 on prime q.",
+    "A finite tower n<=N has GRH error O_a(sqrt(x) N log(Nx)); the Kummer-degree mean tail is polynomially small in N, but the prime-supported large-divisor tail is controlled by the source-matched Felix-Murty argument only at logarithmic scale.",
+    "The formal balance N=x^(1/4) would put the finite Chebotarev error and degree mean tail near x^(3/4+o(1)), but no power-saving estimate is available for the corresponding divisor-supported prime tail. This is a proof-planning heuristic, not a theorem.",
+    "The logarithmic derivative removes branch bookkeeping at finite level but does not improve tower convergence or the n-dependence.",
+    "No Level-2 or Level-3 continuation of the full Q_a(s,z) was proved. No natural-boundary claim was made."
+  ]
 }

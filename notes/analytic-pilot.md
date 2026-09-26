@@ -125,6 +125,23 @@ This is a boundary-continuity statement, not analytic continuation through Re(s)
 
 One s-derivative introduces a factor comparable to log x. Absolute convergence at s=1 would be forced by beta>2. Felix–Murty supplies every beta<2, not beta>2. Thus the quoted error does not imply differentiability of Q_a at s=1. More generally, m boundary derivatives would be forced by beta>m+1.
 
+### Quantitative boundary modulus
+
+The same estimate gives a little more than continuity. Put \(\delta=s-1>0\). Using
+\[
+|e^{-\delta\log x}-1|\le \min(\delta\log x,1)
+\]
+in the partial-summation integral gives, for each fixed \(1<\beta<2\),
+\[
+Q_a(1+\delta,z)-Q_a(1,z)=O_{a,z,\beta}(\delta^{\beta-1}).
+\]
+Because Felix--Murty permits every fixed \(\beta<2\), it follows that the right boundary value is Hölder of every exponent \(\gamma<1\):
+\[
+Q_a(1+\delta,z)-Q_a(1,z)=O_{a,z,\gamma}(\delta^\gamma)
+\qquad(\gamma<1).
+\]
+This is still strictly weaker than differentiability and gives no continuation across \(\Re(s)=1\).
+
 ### What stronger error would cross the line?
 
 No fixed logarithmic saving x/(log x)^B supplies absolute Mellin convergence in any open half-plane Re(s)<1. A power-saving discrepancy such as

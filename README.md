@@ -1,174 +1,152 @@
 # Pointed Order Zeta: Artin–Kummer Spectra of Reduction Orders
 
-**Status: CONTINUATION_PROOF_OBSTRUCTED**
+**Status: PILOT_KILL**
 
-This is a high-risk object-discovery project. Novelty is not assumed, and the Session-3 prior-art conclusions remain controlling.
+The mathematical pilot is closed after Session 6. The project produced useful standalone mathematics and a reproducible residual-index engine, but it did **not** earn another research session under the adversarial go/no-go standard.
 
 ## Frozen starting object
 
-Let \(a\in\mathbf Z\setminus\{0,\pm1\}\), initially not a perfect power. For \(p\nmid a\),
-\[
-I_a(p)=\frac{p-1}{\operatorname{ord}_p(a)}
-=[\mathbf F_p^\times:\langle a\bmod p\rangle].
-\]
+Let (ainmathbf Zsetminus{0,pm1}), initially not a perfect power. For (p
+mid a),
+[
+I_a(p)=rac{p-1}{operatorname{ord}_p(a)}
+=[mathbf F_p^	imes:langle amod pangle].
+]
 The frozen Euler product is
-\[
-Z_a(s,z)=\prod_{p\nmid a}(1-I_a(p)^{-z}p^{-s})^{-1},
-\qquad z\ge0,\quad \Re(s)>1.
-\]
+[
+Z_a(s,z)=prod_{p
+mid a}(1-I_a(p)^{-z}p^{-s})^{-1},
+qquad zge0,quad Re(s)>1.
+]
 The prime-average transform is
-\[
-\Delta_a(z)=\lim_{x\to\infty}\frac1{\pi(x)}
-\sum_{\substack{p\le x\\p\nmid a}}I_a(p)^{-z},
-\]
-whenever the limit exists.
+[
+Delta_a(z)=lim_{x	oinfty}rac1{pi(x)}
+sum_{substack{ple x\p
+mid a}}I_a(p)^{-z},
+]
+when it exists.
 
-These definitions are unchanged by Sessions 4–5.
+These definitions were never altered.
 
-## What Sessions 2–3 established
+## What collapsed into prior art
 
-For fixed \(n\) and \(p\nmid an\),
-\[
-n\mid I_a(p)
-\iff
-p\text{ splits completely in }K_n(a)=\mathbf Q(\zeta_n,a^{1/n}).
-\]
-The residual index, fixed residual-index densities, general weighted averages \(f(I_a(p))\), the Möbius/Kummer degree constant, and \(\Delta_a(z)\) for fixed real \(z>0\) under the relevant GRH hypotheses are established generalized-Artin territory. Felix--Murty is the controlling weighted source; Wagstaff controls the degree formula; Akbary--Fakhari controls product/entanglement structure of the constants.
+Sessions 2–3 established internally, then source-matched, that:
 
-The word “spectrum” is therefore only informal project shorthand.
+- (I_a(p)) is the standard residual index;
+- for fixed (n) and (p
+mid an),
+  [
+  nmid I_a(p)iff p	ext{ splits completely in }K_n(a)=mathbf Q(zeta_n,a^{1/n});
+  ]
+- exact residual-index densities and general weighted sums (f(I_a(p))) are generalized-Artin / near-primitive-root territory;
+- for fixed real (z>0), the mean (Delta_a(z)) is an immediate specialization of the Felix--Murty weighted theorem in its source-matched positive-base GRH setting;
+- Wagstaff's degree formula and Akbary--Fakhari/Lenstra--Moree--Stevenhagen entanglement machinery already control the associated Kummer-degree constants.
 
-## Session-4 analytic reduction
+The word “spectrum” is therefore only informal historical project shorthand.
 
-Write
-\[
-P_a(s,z)=\sum_{p\nmid a}I_a(p)^{-z}p^{-s},
-\]
-and let
-\[
-P(s)=\sum_p p^{-s}.
-\]
-Session 4 isolated
-\[
-\boxed{Q_a(s,z)=P_a(s,z)-\Delta_a(z)P(s)}
-\]
-as the difficult prime-supported analytic object. The \(k\ge2\) part of \(\log Z_a\) is holomorphic for \(\Re(s)>1/2\).
+## What the analytic pilot proved
 
-In the source-matched positive-base setting, Felix--Murty's GRH-conditional weighted error gives a finite right boundary value of \(Q_a\) at \(s=1\), hence
-\[
-Z_a(s,z)\sim C_a(z)(s-1)^{-\Delta_a(z)}
-\qquad(s\to1^+).
-\]
-This is Level 1 only. It does not imply differentiability or complex continuation through \(s=1\).
+Session 4 reduced the Euler-product continuation question to
+[
+Q_a(s,z)=
+sum_{p
+mid a}I_a(p)^{-z}p^{-s}
+-Delta_a(z)sum_p p^{-s}.
+]
+The (kge2) logarithmic Euler-product part is holomorphic for (Re(s)>1/2). Felix--Murty's logarithmic prime-counting error gives only Level 1:
+[
+Z_a(s,z)sim C_a(z)(s-1)^{-Delta_a(z)}
+qquad(s	o1^+)
+]
+under the relevant GRH hypotheses. It does not give complex continuation through (s=1).
 
-## Session-5 proof analysis
-
-For proofs, it is cleaner to use the omitted-prime equivalent
-\[
-Q_a^\circ(s,z)
-=
-\sum_{p\nmid a}
-\bigl(I_a(p)^{-z}-\Delta_a(z)\bigr)p^{-s},
-\]
-since
-\[
-Q_a(s,z)
-=
-Q_a^\circ(s,z)
--
-\Delta_a(z)\sum_{p\mid a}p^{-s}.
-\]
-
-In \(\Re(s)>1\), Session 5 proved the exact absolutely convergent centered Kummer expansion
-\[
-Q_a^\circ(s,z)
-=
-\sum_{n\ge1}g_z(n)
-\left(
-S_{a,n}(s)-\frac1{[K_n(a):\mathbf Q]}P_a^\circ(s,0)
-\right).
-\]
-
-For a finite Galois extension \(K/\mathbf Q\), define
-\[
+Session 5 proved the exact centered finite-level formula
+[
 C_K(s)
 =
-P_{\rm split}(s;K)-\frac1{[K:\mathbf Q]}P(s).
-\]
-Regular-character orthogonality cancels the trivial character exactly, and
-\[
-\boxed{
-C_K(s)
+rac1{[K:mathbf Q]}
+log!left(rac{zeta_K(s)}{zeta(s)}ight)-B_K(s),
+]
+with (B_K) holomorphic for (Re(s)>1/2), and isolated the infinite-tower obstruction. Under Dedekind GRH,
+[
+pi_n(x)
 =
-\frac1{[K:\mathbf Q]}
-\log\!\left(\frac{\zeta_K(s)}{\zeta(s)}\right)
--
-B_K(s),
-}
-\]
-where \(B_K\) is holomorphic for \(\Re(s)>1/2\). By Aramata--Brauer, every fixed centered level continues through a neighborhood of \(s=1\) unconditionally; under Dedekind GRH it is holomorphic for \(\Re(s)>1/2\).
-
-For positive non-perfect-power \(a\),
-\[
-\log|\operatorname{Disc}(K_n(a))|
-\le
-[K_n(a):\mathbf Q](3\log n+\log a),
-\]
-and the source-matched GRH Chebotarev estimate is
-\[
-\pi_n(x)
-=
-\frac{\operatorname{li}(x)}{[K_n(a):\mathbf Q]}
+rac{operatorname{li}(x)}{[K_n(a):mathbf Q]}
 +
-O_a(\sqrt{x}\log(nx)).
-\]
-Consequently, on compact subsets of \(\Re(s)>1/2\),
-\[
-C_{K_n(a)}(s)=O_{a,\Omega}(\log(2n)).
-\]
+O_a(sqrt{x}log(nx)),
+]
+but summing continued levels loses the original divisor-support convergence. Existing large-index control recovers only logarithmic saving, not a power saving.
 
-This is the decisive obstruction: on prime levels \(q\),
-\[
-|g_z(q)|=1-q^{-z}\to1,
-\]
-so the available continued finite-level bound is not summable over the tower. A moving truncation also stops at the known logarithmic error because the prime-supported large-divisor tail has no available power-saving estimate at a power-sized cutoff.
+## Session 6 go / no-go result
 
-The logarithmic derivative removes branch choices but does not improve tower convergence. No Level-2 or Level-3 continuation of the full \(Q_a\) is proved, and no natural-boundary claim is made.
+Session 6 attacked the signed discrepancy, smoothing, exact-index reorganisation, special (z), large sieve for Frobenius, zero-density methods, and the full nested tower.
 
-Detailed proof analysis is in notes/continuation-proof.md.
+The strongest positive result is an exact profinite (L^2) structure. For
+[
+L_a=igcup_nK_n(a),qquad U_n=operatorname{Gal}(L_a/K_n(a)),
+]
+one has
+[
+K_m(a)K_n(a)=K_{operatorname{lcm}(m,n)}(a)
+]
+and therefore
+[
+leftlangle
+mathbf1_{U_m}-rac1{d_m},
+mathbf1_{U_n}-rac1{d_n}
+ightangle
+=
+rac1{d_{operatorname{lcm}(m,n)}}-rac1{d_md_n}.
+]
+Consequently
+[
+sum_n g_z(n)left(mathbf1_{U_n}-rac1{d_n}ight)
+]
+converges in Haar (L^2), with tail
+[
+O_{a,arepsilon}(N^{-1/2+arepsilon}).
+]
 
-## Session-4 computational pilot
+This is genuine nested-tower cancellation. It does **not** transfer, with known theorems, to prime Frobenius elements at a power-sized growing level. The signed divisor tail also has an exact obstruction: if (q>N) is prime,
+[
+sum_{substack{nmid q\n>N}}g_z(n)=q^{-z}-1,
+]
+whose magnitude tends to (1).
 
-The exact arithmetic engine contains sieve-backed prime/factor data, exact residual indices, prime Dirichlet sums, logarithmic Euler products, the source-matched positive non-perfect-power Kummer degree formula, complex-\(z\) diagnostics, and matched-cutoff normalization.
+The large-sieve and zero-density results audited in Session 6 do not match the deterministic nested unbounded-degree family in the form needed. Exact-index and large-(z) reorganisations retain the primitive-root (I_a(p)=1) component, so they do not make the core problem easier than classical generalized-Artin/Hooley theory.
 
-Default reproducible pilot parameters are \(X=10^6\) and \(N=5\times10^5\), with bases \(2,3,5,6,10\). The full unit-test suite has 13 passing tests. Results and reproducibility details are in notes/computational-pilot.md.
+Full details: notes/session6-go-no-go.md.
 
-Session 5 made no code changes because the decisive obstruction is analytic rather than numerical.
+## Why the pilot is killed
 
-## What survives
+The remaining theorem would be a power-saving effective equidistribution theorem for a growing nested Kummer tower. Proving such a theorem would be a recognizable contribution, but the project found no credible reason that the Pointed Order Zeta construction makes it easier than the classical generalized-Artin problem. The best new mechanism—the (L^2) lcm covariance—already persists at the primitive-root endpoint.
 
-The primary analytic object remains \(Q_a(s,z)\), with \(Q_a^\circ(s,z)\) preferred for proof bookkeeping.
+Under the Session-6 standard, that is not enough to justify another project session.
 
-The theorem-sized surviving problem is now narrower:
+No Level-2 continuation was proved. No Level-3 continuation was proved. No natural boundary was proved.
 
-> Can one prove a power-saving **tower-averaged centered Kummer discrepancy**, preserving the original divisor-support structure, rather than summing termwise continued finite-level \(L\)-function bounds?
+## Standalone outputs worth retaining
 
-A successful result would need cancellation across \(n\), a power-saving estimate for the large-divisor prime tail, or a different argument that avoids tower separation.
+- notes/foundational-derivation.md — first-principles residual-index/Kummer derivation.
+- notes/prior-art-matrix.md, notes/literature.md — source-level collision map.
+- notes/analytic-pilot.md — reduction to the centered prime series.
+- notes/continuation-proof.md — finite-level centered (L)-function identity, discriminant bounds, and tower obstruction.
+- notes/session6-go-no-go.md — exact discrepancy decomposition, profinite (L^2) theorem, theorem matching, and final decision.
+- src/, scripts/, tests/ — exact residual-index and analytic-pilot code.
 
 ## Research gates
 
-0. SCAFFOLD — complete: SCAFFOLD_COMPLETE  
-1. FOUNDATIONAL DERIVATION — complete: FOUNDATIONS_PASS  
-2. PRIOR-ART / NOVELTY AUDIT — complete: PRIOR_ART_REFRAME  
-3. REFRAMED COMPUTATIONAL / ANALYTIC PILOT — complete: ANALYTIC_PILOT_REFRAME  
-4. REFRAMED MATHEMATICAL PROOF — complete: CONTINUATION_PROOF_OBSTRUCTED  
-5. NEXT PROOF SESSION — only in reframed form around tower-averaged power-saving discrepancy  
-6. GENERALISATION — deferred  
-7. LEAN / FORMALISATION — deferred  
-8. ADVERSARIAL NOVELTY AUDIT — later  
-9. PAPER — later
+0. SCAFFOLD — **SCAFFOLD_COMPLETE**  
+1. FOUNDATIONAL DERIVATION — **FOUNDATIONS_PASS**  
+2. PRIOR-ART / NOVELTY AUDIT — **PRIOR_ART_REFRAME**  
+3. REFRAMED COMPUTATIONAL / ANALYTIC PILOT — **ANALYTIC_PILOT_REFRAME**  
+4. REFRAMED MATHEMATICAL PROOF — **CONTINUATION_PROOF_OBSTRUCTED**  
+5. ADVERSARIAL GO / NO-GO — **PILOT_KILL**
 
-## Current exit state
+Generalisation, Lean/formalisation, and paper work were not begun.
 
-**CONTINUATION_PROOF_OBSTRUCTED**
+## Final exit state
 
-The continuation target remains substantive, but the natural Kummer/Chebotarev/\(L\)-function route is rigorously blocked at the tower-summation step by nonsummable finite-level bounds and only logarithmic control of the divisor-supported tail. This is a method obstruction, not a theorem of non-continuation.
+**PILOT_KILL**
+
+No Session 7 should occur under this project.

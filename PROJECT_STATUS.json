@@ -1,7 +1,7 @@
 {
   "project": "Pointed Order Zeta: Artin–Kummer Spectra of Reduction Orders",
-  "phase": "4_REFRAMED_MATHEMATICAL_PROOF",
-  "status": "CONTINUATION_PROOF_OBSTRUCTED",
+  "phase": "6_ADVERSARIAL_GO_NO_GO",
+  "status": "PILOT_KILL",
   "frozen_definitions": [
     "Initial base a is a nonzero integer, a != ±1, initially not a perfect power.",
     "For primes p not dividing a, ord_p(a) is the multiplicative order of a modulo p.",
@@ -54,22 +54,23 @@
     "Candidate that degree growth alone makes the naively separated infinite Kummer-tower L-product converge.",
     "Candidate that exact finite-level centering plus Dedekind GRH is by itself enough to sum the continued Kummer tower.",
     "Candidate that Artin holomorphy, even together with Artin GRH, automatically restores the missing tower decay.",
-    "Candidate that passing to the logarithmic derivative repairs the Kummer-tower convergence problem."
+    "Candidate that passing to the logarithmic derivative repairs the Kummer-tower convergence problem.",
+    "Candidate that nested Kummer structure by itself supplies a usable prime-side L2 averaging theorem.",
+    "Candidate that signed divisor-tail cancellation is uniformly much stronger than the absolute Felix-Murty tail.",
+    "Candidate that smoothing, exact-index reorganisation, large z, or z=1,2 removes the continuation obstruction.",
+    "Candidate that an existing large-sieve or zero-density theorem already supplies the required deterministic Kummer-tower averaging."
   ],
   "open_questions": [
-    "Can one prove a tower-averaged power-saving estimate for sum_{n<=N} g_z(n)(pi_n(x)-li(x)/[K_n(a):Q]) with N=x^alpha for some alpha>0?",
-    "Can the prime-supported large-divisor tail sum_{p<=x} sum_{n|I_a(p), n>N} g_z(n) be centered and bounded by O(x^(1-delta)) for a power-sized N?",
-    "Is there a large-sieve-for-Frobenius, zero-density, or explicit-formula theorem genuinely uniform for this nested unbounded-degree Kummer family that supplies cancellation across n?",
-    "Can a smoothed version of the tower discrepancy be proved with a power saving and then converted into Level-2 or Level-3 continuation of Q_a?",
-    "Could Q_a(s,z) continue across Re(s)=1 for reasons not visible in the separated Kummer tower?",
-    "Does Felix-Murty Theorem 1.7, or a later theorem of equal generality, explicitly cover negative integer bases for general f(i_a(p))?"
+    "Standalone only: can the Haar-L2 lcm covariance model for residual-index observables be developed abstractly for generalized Artin/Kummer systems?",
+    "Standalone only: can one ever prove effective prime equidistribution for these L2 observables at growing level? This is no longer an active Pointed Order Zeta project target.",
+    "Source-matching cleanup only: does Felix-Murty Theorem 1.7, or a later theorem of equal generality, explicitly cover negative integer bases for general f(i_a(p))?"
   ],
-  "surviving_target": "Q_a(s,z) remains the primary analytic object, with the omitted-prime equivalent Q_a^circ(s,z) preferred for proofs. The next theorem-sized target is a tower-averaged power-saving centered Kummer discrepancy that preserves the original divisor-support structure.",
-  "literature_status": "SESSION_3_CONTROLLING_PRIOR_ART_RETAINED. Session 5 added only targeted proof sources: Serre/Felix-Murty for effective Chebotarev and discriminant control, Aramata-Brauer for the finite-level zeta quotient, and the conductor-discriminant formula. No theorem was located that supplies the required power-saving weighted Kummer-tower discrepancy.",
+  "surviving_target": "No active Pointed Order Zeta theorem programme. The centered series Q_a(s,z) remains a mathematically meaningful object, but the missing continuation input is an effective prime-equidistribution theorem for a growing nested Kummer tower, not a project-specific consequence of the Euler product.",
+  "literature_status": "SESSION_3_CONTROLLING_PRIOR_ART_RETAINED. Session 6 theorem-matched Zywina large sieve, Kowalski Frobenius large sieve, Thorner-Zaman zero density, Lemke Oliver-Smith averaged Chebotarev, and Murty-Petersen Bombieri-Vinogradov technology. None supplies the required weighted discrepancy for the deterministic nested unbounded-degree Kummer tower.",
   "computation_status": "SESSION_4_REPRODUCIBLE_PILOT_PASS: 13 unit tests pass; the driver reproduces the X<=1e6 and N<=5e5 diagnostics documented in notes/computational-pilot.md.",
-  "proof_status": "SESSION_5_OBSTRUCTION_PROVED: finite centered Chebotarev levels continue across s=1 and, under Dedekind GRH, to Re(s)>1/2, but the strongest tower-uniform bound is O(log n), nonsummable against g_z. Existing moving-truncation tail technology recovers only logarithmic prime discrepancy. No Level-2 or Level-3 continuation of the full Q_a is established.",
-  "next_session": "SESSION 6 MAY PROCEED IN REFRAMED PROOF FORM ONLY: target tower-averaged cancellation and a power-saving divisor-supported tail (possibly first in a smoothed formulation). Do not repeat the infinite L-function factorization route or infer non-continuation from its failure.",
-  "exit_state": "CONTINUATION_PROOF_OBSTRUCTED",
+  "proof_status": "SESSION_6_KILL: exact nestedness gives a new in-project Haar-L2 covariance theorem and a TGRH finite-window mean-square estimate, but the signed divisor tail is not intrinsically small and no audited large-sieve/zero-density theorem transfers the Haar cancellation to primes at power-sized tower depth. No Level-2 or Level-3 continuation theorem is established.",
+  "next_session": "NONE. The mathematical pilot is closed with PILOT_KILL. Preserve the standalone profinite L2 observation, finite-level continuation notes, literature audit, and arithmetic code; do not begin Session 7, generalisation, Lean, or paper work under this project.",
+  "exit_state": "PILOT_KILL",
   "last_updated": "2026-09-26",
   "session5_proof_results": [
     "The analytically clean proof object is the omitted-prime centered series Q_a^circ(s,z)=sum_{p not dividing a}(I_a(p)^(-z)-Delta_a(z))p^(-s), which differs from Q_a by a finite entire Dirichlet polynomial.",
@@ -83,5 +84,22 @@
     "The formal balance N=x^(1/4) would put the finite Chebotarev error and degree mean tail near x^(3/4+o(1)), but no power-saving estimate is available for the corresponding divisor-supported prime tail. This is a proof-planning heuristic, not a theorem.",
     "The logarithmic derivative removes branch bookkeeping at finite level but does not improve tower convergence or the n-dependence.",
     "No Level-2 or Level-3 continuation of the full Q_a(s,z) was proved. No natural-boundary claim was made."
+  ],
+  "pilot_disposition": {
+    "verdict": "KILL",
+    "reason": "The strongest project-specific structure is an exact lcm covariance/Haar-L2 theorem, but existing prime-distribution technology cannot exploit it at growing tower depth, and the same mechanism is already present at the classical primitive-root endpoint. The remaining target is therefore essentially new generalized-Artin/Chebotarev uniformity rather than a theorem programme made tractable by Pointed Order Zeta.",
+    "level2_continuation": false,
+    "level3_continuation": false,
+    "another_session": false
+  },
+  "session6_results": [
+    "Exact truncation: D_z^circ(x) splits into a signed finite-level Kummer sum, the explicit divisor-supported prime tail T_z(x;N), the Kummer-degree series tail, and the PNT/omitted-prime normalization correction.",
+    "For R_{z,N}(m)=sum_{n|m,n>N}g_z(n), one has R_{z,N}(m)=m^{-z}-sum_{n|m,n<=N}g_z(n); for prime q>N, R_{z,N}(q)=q^{-z}-1, so the signed divisor tail is not uniformly smaller than the absolute tail.",
+    "Exact nested-tower law: K_m(a)K_n(a)=K_lcm(m,n)(a). On the profinite Galois group, centered splitting indicators have covariance 1/d_lcm(m,n)-1/(d_m d_n).",
+    "The centered residual-index observable sum_n g_z(n)(1_{U_n}-1/d_n) converges unconditionally in Haar L2, with L2 tail O_{a,epsilon}(N^{-1/2+epsilon}).",
+    "Under tower GRH, a finite-window prime mean-square bound follows from the lcm covariance and effective Chebotarev: main covariance tail O(li(x)N^{-1+epsilon}) plus an error O(sqrt(x)L^2 log(Lx)); this does not control the full tail.",
+    "Smoothing improves zero-height decay but not tower/conductor dependence. Exact-index reorganisation improves coefficient tails but retains the primitive-root t=1 term. Large z and z=1,2 do not create a continuation range.",
+    "Zywina-style large sieve is closest at prime-index independent quotients but does not estimate the all-n nested weighted discrepancy; Kowalski's geometric Frobenius sieve, Murty-Petersen's modulus average, and fixed-group family zero-density/averaged-Chebotarev theorems do not match the Kummer tower.",
+    "No new Level-2 or Level-3 continuation theorem was proved. No natural boundary or impossibility theorem was claimed."
   ]
 }

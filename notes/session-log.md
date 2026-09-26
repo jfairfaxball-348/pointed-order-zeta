@@ -324,3 +324,76 @@ Exit state: **CONTINUATION_PROOF_OBSTRUCTED**.
 
 Next session: proceed only in reframed proof form. The theorem-sized target is a tower-averaged power-saving centered Kummer discrepancy, especially a power-saving estimate for the divisor-supported large-index tail at a power-sized truncation. Do not repeat the naively separated infinite \(L\)-function route.
 
+
+
+## Session 6 — Adversarial go / no-go gate
+
+Date: 2026-09-26
+
+Scope honored: final pilot decision. Sessions 3–5 were treated as controlling. No frozen definition was altered. No generalisation, Lean work, paper writing, or Session 7 work was begun.
+
+The exact centered discrepancy was decomposed into:
+
+- a signed finite-level Kummer discrepancy;
+- the explicit divisor-supported tail
+  \[
+  \mathcal T_z(x;N)
+  =
+  \sum_{\substack{p\le x\\p\nmid a}}
+  \sum_{\substack{n\mid I_a(p)\\n>N}}g_z(n);
+  \]
+- the Kummer-degree series tail;
+- the PNT/omitted-prime normalization correction.
+
+The signed tail was attacked without taking absolute values first. For
+\[
+R_{z,N}(m)=\sum_{\substack{n\mid m\\n>N}}g_z(n),
+\]
+Session 6 proved
+\[
+R_{z,N}(m)=m^{-z}-\sum_{\substack{n\mid m\\n\le N}}g_z(n).
+\]
+For prime \(q>N\),
+\[
+R_{z,N}(q)=q^{-z}-1,
+\]
+so the signed tail has no uniform pointwise cancellation advantage.
+
+The strongest positive structural result was the exact lcm law
+\[
+K_m(a)K_n(a)=K_{\operatorname{lcm}(m,n)}(a).
+\]
+On the profinite Kummer Galois group this gives the centered covariance
+\[
+\frac1{d_{\operatorname{lcm}(m,n)}}-\frac1{d_md_n}.
+\]
+Consequently the full centered residual-index observable converges unconditionally in Haar \(L^2\), with tail
+\[
+O_{a,\varepsilon}(N^{-1/2+\varepsilon}).
+\]
+
+Under tower GRH, the same structure yields a finite-window prime mean-square estimate whose main covariance term is
+\[
+O(\operatorname{li}(x)N^{-1+\varepsilon}),
+\]
+but whose effective Chebotarev error is
+\[
+O(\sqrt{x}L^2\log(Lx)).
+\]
+This does not control the full tower tail at a useful power-sized level.
+
+Targeted theorem matching was performed against Zywina's large sieve for independent Galois representations, Kowalski's large sieve for Frobenius in geometric families, Murty--Petersen's Bombieri--Vinogradov theorem for fixed number-field splitting conditions, Thorner--Zaman zero-density estimates for fixed-Galois-group families, and Lemke Oliver--Smith averaged Chebotarev. None matches the deterministic nested, unbounded-degree Kummer tower in the form required.
+
+Smoothing improved vertical explicit-formula decay but not tower dependence. Exact-index reorganisation improved coefficient tails but retained the primitive-root \(t=1\) term. Large fixed \(z\), \(z=1\), and \(z=2\) did not produce a useful continuation regime. No Level-2 or Level-3 continuation theorem was proved, and no natural boundary was claimed.
+
+The decisive adversarial conclusion is that the remaining hard theorem would be a new effective generalized-Artin/Chebotarev result for a growing nested Kummer tower. The project found no credible reason that Pointed Order Zeta makes this problem easier than the classical primitive-root endpoint, where the same lcm/inclusion--exclusion structure is already present.
+
+Required output created:
+
+- notes/session6-go-no-go.md
+
+Project state and documentation were updated to close the pilot cleanly.
+
+Exit state: **PILOT_KILL**.
+
+No Session 7 should occur under this project. The profinite \(L^2\) theorem, finite-level analytic notes, prior-art audit, and exact arithmetic code are retained as standalone outputs.

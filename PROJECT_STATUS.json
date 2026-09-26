@@ -30,6 +30,7 @@
     "For real z>=0, R_a(s,z)=sum_p sum_{k>=2} I_a(p)^(-zk)/(k p^(ks)) is holomorphic for Re(s)>1/2 by locally uniform absolute convergence.",
     "Writing P(s)=sum_p p^(-s) and Q_a(s,z)=P_a(s,z)-Delta_a(z)P(s), one has exactly for Re(s)>1: log H_a(s,z)=Q_a(s,z)+R_a(s,z)-Delta_a(z)R_zeta(s).",
     "For source-matched positive a and fixed real z>0, Felix-Murty gives under GRH an error O(x/(log x)^beta) for every fixed beta<2. After subtracting Delta_a(z) pi(x), partial summation gives a finite continuous boundary value of Q_a(s,z) on Re(s)=1.",
+    "More quantitatively, for every fixed gamma<1 the same error gives Q_a(1+delta,z)-Q_a(1,z)=O(delta^gamma) as delta->0+, but it does not imply differentiability at the boundary.",
     "Consequently, under those GRH hypotheses, H_a(s,z)=Z_a(s,z) zeta(s)^(-Delta_a(z)) has a finite positive real limit as s->1+, and Z_a(s,z) is asymptotic to C_a(z)(s-1)^(-Delta_a(z)). This is Level 1 only.",
     "The Felix-Murty logarithmic error does not imply differentiability at s=1 or holomorphic continuation into any half-plane Re(s)<1. A power-saving error would be needed for such Mellin continuation by this route.",
     "For real z>0 and Re(s)>1, the Kummer-indicator expansion may be interchanged absolutely with the prime sum; the divisor-support bound sum_{n|I}|g_z(n)| <= tau(I) supplies the convergence mechanism.",

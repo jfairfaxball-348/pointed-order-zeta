@@ -1,12 +1,13 @@
 """Exact elementary computations for residual indices modulo primes.
 
-Session 2 support code: dependency-free and intended for small exact
-consistency checks, not large-scale experiments.
+Session 2 introduced the dependency-free exact routines. Session 4 keeps those
+interfaces and adds optional pre-factored p-1 support for larger pilots.
 """
 
 from __future__ import annotations
 
 from math import gcd
+from typing import Mapping
 
 
 def factorint(n: int) -> dict[int, int]:
@@ -42,28 +43,37 @@ def is_prime(n: int) -> bool:
     return True
 
 
-def multiplicative_order_mod_prime(a: int, p: int) -> int:
-    """Compute ord_p(a) exactly by factoring p-1 and stripping factors."""
+def multiplicative_order_mod_prime(
+    a: int,
+    p: int,
+    p_minus_one_factors: Mapping[int, int] | None = None,
+) -> int:
+    """Compute ord_p(a) exactly by stripping prime factors of p-1."""
     if not is_prime(p):
         raise ValueError("p must be prime")
     if gcd(a, p) != 1:
         raise ValueError("multiplicative order is undefined when p divides a")
 
+    factors = p_minus_one_factors or factorint(p - 1)
     order = p - 1
-    for q in factorint(p - 1):
+    for q in factors:
         while order % q == 0 and pow(a, order // q, p) == 1:
             order //= q
     return order
 
 
-def residual_index(a: int, p: int) -> int:
-    """Return I_a(p) = (p-1)/ord_p(a)."""
-    order = multiplicative_order_mod_prime(a, p)
+def residual_index(
+    a: int,
+    p: int,
+    p_minus_one_factors: Mapping[int, int] | None = None,
+) -> int:
+    """Return I_a(p) = (p-1)/ord_p(a) exactly."""
+    order = multiplicative_order_mod_prime(a, p, p_minus_one_factors)
     return (p - 1) // order
 
 
 def is_nth_power_mod_prime(a: int, n: int, p: int) -> bool:
-    """Check a mod p is an n-th power by independent exact brute force."""
+    """Check a mod p is an n-th power by independent brute force."""
     if n < 1:
         raise ValueError("n must be >= 1")
     if not is_prime(p):

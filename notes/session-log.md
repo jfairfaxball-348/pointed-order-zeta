@@ -149,3 +149,66 @@ Required outputs created:
 Exit state: **PRIOR_ART_REFRAME**.
 
 Next session: proceed only in reframed form. Treat Felix--Murty Theorem 1.7 as controlling input and investigate the analytic infinite-Kummer Euler-product layer rather than rediscovering \(\Delta_a(z)\).
+
+
+## Session 4 — Reframed computational / analytic pilot
+
+Date: 2026-09-26
+
+Scope honored: analytic reduction and reproducible computation only. The Session-3 generalized-Artin collision was treated as controlling input. No elliptic/abelian generalisation, Lean work, paper drafting, or deep continuation theorem was started.
+
+The logarithm was decomposed as
+\[
+\log Z_a(s,z)=P_a(s,z)+R_a(s,z),
+\]
+with
+\[
+P_a(s,z)=\sum_{p\nmid a}I_a(p)^{-z}p^{-s}.
+\]
+For real \(z\ge0\), locally uniform absolute convergence proves that \(R_a(s,z)\) is holomorphic on \(\Re(s)>1/2\).
+
+Writing \(P(s)=\sum_p p^{-s}\) and
+\[
+Q_a(s,z)=P_a(s,z)-\Delta_a(z)P(s),
+\]
+Session 4 obtained the exact identity
+\[
+\log H_a(s,z)
+=
+Q_a(s,z)+R_a(s,z)-\Delta_a(z)R_\zeta(s)
+\]
+in \(\Re(s)>1\), where \(R_\zeta=\log\zeta-P\) is also holomorphic for \(\Re(s)>1/2\). Thus the difficult analytic information is concentrated in the centered prime series \(Q_a\).
+
+In the source-matched positive-base setup, Felix--Murty Theorem 1.7 supplies under GRH an error \(O(x/(\log x)^\beta)\) for every fixed \(\beta<2\). Choosing \(\beta>1\), partial summation shows that \(Q_a(s,z)\) has a finite continuous boundary value on \(\Re(s)=1\). Hence
+\[
+H_a(s,z)=Z_a(s,z)\zeta(s)^{-\Delta_a(z)}
+\]
+has a finite positive real limit as \(s\to1^+\), and therefore
+\[
+Z_a(s,z)\sim C_a(z)(s-1)^{-\Delta_a(z)}.
+\]
+This is a Level-1 real boundary statement only. The known logarithmic error does not supply differentiability at \(s=1\) or continuation into any open half-plane \(\Re(s)<1\).
+
+For real \(z>0\), \(\Re(s)>1\), the Kummer-indicator expansion was shown to interchange absolutely with the prime sum using the divisor-support bound \(\sum_{n\mid I}|g_z(n)|\le\tau(I)\). At each fixed Kummer level, regular-character orthogonality gives an exact finite-Galois decomposition of the completely-split prime series into logarithms of Artin \(L\)-functions, equivalently a normalized \(\log\zeta_{K_n}\), plus ramified and higher-prime-power corrections. However, naively separating these expressions over the infinite tower loses the original divisor-support convergence mechanism; degree growth alone does not justify the resulting infinite \(L\)-product.
+
+The exact computational engine was extended and validated by 12 passing unit tests. With default cutoffs \(X=10^6\) and \(N=5\times10^5\), empirical prime means for \(a=2,3,5,6,10\) and \(z=0,1/2,1,2,4,8\) track the Kummer-degree predictions at roughly \(10^{-4}\) to \(10^{-3}\), with \(a=10\) showing slower convergence near \(2\times10^{-3}\). Matched-cutoff normalized logarithms are stable to about \(10^{-3}\) across the tested cutoffs. No stable secondary term or Level-2/Level-3 continuation signal was found.
+
+Complex-z diagnostics were also implemented. Independently of the prime-mean problem, the positive non-perfect-power Kummer degree series was proved absolutely and locally uniformly convergent for \(\Re(z)>-1\). No complex-z weighted-prime theorem was claimed.
+
+Strongest collapse: the Level-1 normalization of the frozen Euler product is routine once the Felix--Murty weighted prime asymptotic is accepted, and the \(k\ge2\) Euler-product layer is analytically harmless for \(\Re(s)>1/2\).
+
+Replacement analytic object:
+\[
+\boxed{Q_a(s,z)=P_a(s,z)-\Delta_a(z)P(s).}
+\]
+
+Required outputs created:
+
+- notes/analytic-pilot.md
+- notes/computational-pilot.md
+- src/analytic_pilot.py
+- scripts/run_analytic_pilot.py
+
+Exit state: **ANALYTIC_PILOT_REFRAME**.
+
+Next session: proceed only in reframed mathematical-proof form. The theorem-sized target is whether \(Q_a(s,z)\) admits holomorphic continuation to any half-plane crossing \(\Re(s)=1\), and whether the finite-level Artin/Dedekind-\(L\) identities can be reorganized uniformly over the Kummer tower. Do not re-open the Level-1 boundary asymptotic as a novelty target.

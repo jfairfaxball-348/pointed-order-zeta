@@ -62,7 +62,7 @@
   ],
   "surviving_target": "The preferred analytic object is the centered weighted prime Dirichlet series Q_a(s,z)=P_a(s,z)-Delta_a(z)P(s). H_a remains useful packaging because log H differs from Q_a by a function holomorphic for Re(s)>1/2.",
   "literature_status": "SESSION_3_CONTROLLING_PRIOR_ART_RETAINED. Session 4 used only targeted source matching: Felix-Murty Theorem 1.7 supplies any fixed beta<2 in the source-matched positive-base GRH setting; no source was found or assumed that automatically supplies complex continuation of the centered infinite-Kummer prime series.",
-  "computation_status": "SESSION_4_REPRODUCIBLE_PILOT_PASS: 12 unit tests pass; the driver reproduces the X<=1e6 and N<=5e5 diagnostics documented in notes/computational-pilot.md.",
+  "computation_status": "SESSION_4_REPRODUCIBLE_PILOT_PASS: 13 unit tests pass; the driver reproduces the X<=1e6 and N<=5e5 diagnostics documented in notes/computational-pilot.md.",
   "proof_status": "LEVEL_1_BOUNDARY_ESTABLISHED_CONDITIONALLY: under the Felix-Murty GRH hypotheses for positive a and fixed real z>0, H_a(s,z) has a finite positive real limit as s->1+. R_a is unconditionally holomorphic for Re(s)>1/2. No Level-2 or Level-3 continuation theorem is established.",
   "next_session": "SESSION 5 SHOULD PROCEED IN REFRAMED MATHEMATICAL-PROOF FORM: study holomorphic continuation of Q_a(s,z) and whether finite-level L-function identities can be summed uniformly over the Kummer tower. Do not re-prove the Level-1 boundary constant or treat it as novelty.",
   "exit_state": "ANALYTIC_PILOT_REFRAME",

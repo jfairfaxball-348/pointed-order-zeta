@@ -212,3 +212,115 @@ Required outputs created:
 Exit state: **ANALYTIC_PILOT_REFRAME**.
 
 Next session: proceed only in reframed mathematical-proof form. The theorem-sized target is whether \(Q_a(s,z)\) admits holomorphic continuation to any half-plane crossing \(\Re(s)=1\), and whether the finite-level Artin/Dedekind-\(L\) identities can be reorganized uniformly over the Kummer tower. Do not re-open the Level-1 boundary asymptotic as a novelty target.
+
+## Session 5 — Reframed mathematical proof
+
+Date: 2026-09-26
+
+Scope honored: proof analysis of the centered prime Dirichlet series and its Kummer-tower realization. Session-3 prior art and Session-4 Level-1 boundary regularity were treated as controlling inputs. No elliptic/abelian generalisation, Lean work, paper drafting, negative-base extension, or natural-boundary claim was begun.
+
+The finite omitted-prime normalization was isolated:
+\[
+Q_a^\circ(s,z)
+=
+\sum_{p\nmid a}
+\bigl(I_a(p)^{-z}-\Delta_a(z)\bigr)p^{-s},
+\]
+with
+\[
+Q_a(s,z)
+=
+Q_a^\circ(s,z)
+-
+\Delta_a(z)\sum_{p\mid a}p^{-s}.
+\]
+Thus the two continuation problems are identical.
+
+For \(\Re(s)>1\), Session 5 derived the exact absolutely convergent centered Kummer expansion
+\[
+Q_a^\circ(s,z)
+=
+\sum_{n\ge1}g_z(n)
+\left(
+S_{a,n}(s)
+-
+\frac1{[K_n(a):\mathbf Q]}P_a^\circ(s,0)
+\right).
+\]
+Converting residual divisibility to complete splitting introduces only a finite exceptional correction at \(n=2,p=2\).
+
+For a fixed finite Galois extension \(K/\mathbf Q\), regular-character orthogonality removes the trivial character exactly. Writing
+\[
+C_K(s)=P_{\rm split}(s;K)-\frac1{[K:\mathbf Q]}P(s),
+\]
+Session 5 obtained
+\[
+C_K(s)
+=
+\frac1{[K:\mathbf Q]}
+\log\!\left(\frac{\zeta_K(s)}{\zeta(s)}\right)
+-
+B_K(s),
+\]
+where \(B_K\) is holomorphic for \(\Re(s)>1/2\). Aramata--Brauer makes \(\zeta_K/\zeta\) entire and nonzero at \(s=1\), so every fixed centered level has a \(K\)-dependent local continuation through \(s=1\) unconditionally. Under Dedekind GRH it is holomorphic on \(\Re(s)>1/2\). Artin holomorphy is not needed for this aggregate statement.
+
+Using Hensel's discriminant inequality as quoted by Felix--Murty from Serre, together with the fact that only primes dividing \(an\) ramify in \(K_n(a)\), Session 5 derived
+\[
+\log|\operatorname{Disc}(K_n(a))|
+\le
+[K_n(a):\mathbf Q](3\log n+\log a).
+\]
+The conductor--discriminant formula gives the same aggregate conductor scale for the regular representation minus the trivial character.
+
+Felix--Murty's source-matched GRH Chebotarev estimate gives
+\[
+\pi_n(x)
+=
+\frac{\operatorname{li}(x)}{[K_n(a):\mathbf Q]}
++
+O_a(\sqrt{x}\log(nx)).
+\]
+After centering and Mellin transformation, this yields on every compact
+\[
+\Omega\Subset\{\Re(s)>1/2\}
+\]
+the tower-uniform bound
+\[
+C_{K_n(a)}(s)=O_{a,\Omega}(\log(2n)).
+\]
+This is not summable by absolute values against \(g_z\), since on prime levels
+\[
+|g_z(q)|=1-q^{-z}\to1.
+\]
+Thus exact centering removes the finite-level pole but does not restore a summable infinite-\(n\) majorant.
+
+Moving truncation was then analyzed in the original prime representation. The finite levels satisfy an aggregate GRH error
+\[
+O_a(\sqrt{x}N\log(Nx)),
+\]
+while the Kummer-degree mean tail is polynomially small in \(N\). Formally these two pieces would balance at \(N=x^{1/4}\), around the scale \(x^{3/4+o(1)}\). However the actual prime-supported large-divisor tail is controlled by Felix--Murty's Lemma 3.11 only at the logarithmic scale used in their theorem, recovering
+\[
+O\!\left(\frac{x}{(\log x)^{2-\varepsilon}}\right)
+\]
+rather than a power saving. This is the decisive proof obstruction.
+
+The logarithmic derivative removes logarithm branch choices at finite level but keeps the same tower dependence and does not improve convergence. The special weights \(z=1\) and \(z=2\) do not help: their \(g_z(q)\) values still tend to \(-1\) on primes.
+
+No Level-2 or Level-3 continuation theorem for the full \(Q_a(s,z)\) was proved. No failure of continuation was proved either.
+
+Required output created:
+
+- \`notes/continuation-proof.md\`
+
+Targeted references added:
+
+- Serre (1981), effective Chebotarev/discriminant framework;
+- Murty--Murty (1997), Aramata--Brauer theorem;
+- Neukirch (1999), conductor--discriminant formula.
+
+No code was changed: the obstruction is analytic and the existing Session-4 engine was not needed to decide any proof estimate.
+
+Exit state: **CONTINUATION_PROOF_OBSTRUCTED**.
+
+Next session: proceed only in reframed proof form. The theorem-sized target is a tower-averaged power-saving centered Kummer discrepancy, especially a power-saving estimate for the divisor-supported large-index tail at a power-sized truncation. Do not repeat the naively separated infinite \(L\)-function route.
+

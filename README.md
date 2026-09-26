@@ -1,6 +1,6 @@
 # Pointed Order Zeta: Artin–Kummer Spectra of Reduction Orders
 
-**Status: ANALYTIC_PILOT_REFRAME**
+**Status: CONTINUATION_PROOF_OBSTRUCTED**
 
 This is a high-risk object-discovery project. Novelty is not assumed, and the Session-3 prior-art conclusions remain controlling.
 
@@ -23,7 +23,7 @@ The prime-average transform is
 \]
 whenever the limit exists.
 
-These definitions are unchanged by Session 4.
+These definitions are unchanged by Sessions 4–5.
 
 ## What Sessions 2–3 established
 
@@ -41,56 +41,118 @@ The word “spectrum” is therefore only informal project shorthand.
 
 Write
 \[
-P_a(s,z)=\sum_{p\nmid a}I_a(p)^{-z}p^{-s}
+P_a(s,z)=\sum_{p\nmid a}I_a(p)^{-z}p^{-s},
 \]
-and
+and let
 \[
-R_a(s,z)=\sum_{p\nmid a}\sum_{k\ge2}
-\frac{I_a(p)^{-zk}}{k p^{ks}}.
+P(s)=\sum_p p^{-s}.
 \]
-For real \(z\ge0\), \(R_a\) is holomorphic for \(\Re(s)>1/2\).
+Session 4 isolated
+\[
+\boxed{Q_a(s,z)=P_a(s,z)-\Delta_a(z)P(s)}
+\]
+as the difficult prime-supported analytic object. The \(k\ge2\) part of \(\log Z_a\) is holomorphic for \(\Re(s)>1/2\).
 
-Let \(P(s)=\sum_p p^{-s}\) be the prime zeta function and define
+In the source-matched positive-base setting, Felix--Murty's GRH-conditional weighted error gives a finite right boundary value of \(Q_a\) at \(s=1\), hence
 \[
-\boxed{Q_a(s,z)=P_a(s,z)-\Delta_a(z)P(s).}
+Z_a(s,z)\sim C_a(z)(s-1)^{-\Delta_a(z)}
+\qquad(s\to1^+).
 \]
-Then, in \(\Re(s)>1\),
+This is Level 1 only. It does not imply differentiability or complex continuation through \(s=1\).
+
+## Session-5 proof analysis
+
+For proofs, it is cleaner to use the omitted-prime equivalent
 \[
-\log\bigl(Z_a(s,z)\zeta(s)^{-\Delta_a(z)}\bigr)
+Q_a^\circ(s,z)
 =
+\sum_{p\nmid a}
+\bigl(I_a(p)^{-z}-\Delta_a(z)\bigr)p^{-s},
+\]
+since
+\[
 Q_a(s,z)
-+
-\text{a function holomorphic for }\Re(s)>1/2.
+=
+Q_a^\circ(s,z)
+-
+\Delta_a(z)\sum_{p\mid a}p^{-s}.
 \]
-Thus \(Q_a\), rather than the bare Euler-product packaging, is the preferred surviving analytic object.
 
-In the source-matched positive-base setting, Felix--Murty's GRH-conditional weighted error has exponent \(\beta>1\). Partial summation therefore proves that
+In \(\Re(s)>1\), Session 5 proved the exact absolutely convergent centered Kummer expansion
 \[
-H_a(s,z)=Z_a(s,z)\zeta(s)^{-\Delta_a(z)}
+Q_a^\circ(s,z)
+=
+\sum_{n\ge1}g_z(n)
+\left(
+S_{a,n}(s)-\frac1{[K_n(a):\mathbf Q]}P_a^\circ(s,0)
+\right).
 \]
-has a finite positive real limit as \(s\to1^+\). Equivalently,
+
+For a finite Galois extension \(K/\mathbf Q\), define
 \[
-Z_a(s,z)\sim C_a(z)(s-1)^{-\Delta_a(z)}.
+C_K(s)
+=
+P_{\rm split}(s;K)-\frac1{[K:\mathbf Q]}P(s).
 \]
-This is only a Level-1 real boundary asymptotic. It does not prove holomorphic continuation through \(s=1\).
+Regular-character orthogonality cancels the trivial character exactly, and
+\[
+\boxed{
+C_K(s)
+=
+\frac1{[K:\mathbf Q]}
+\log\!\left(\frac{\zeta_K(s)}{\zeta(s)}\right)
+-
+B_K(s),
+}
+\]
+where \(B_K\) is holomorphic for \(\Re(s)>1/2\). By Aramata--Brauer, every fixed centered level continues through a neighborhood of \(s=1\) unconditionally; under Dedekind GRH it is holomorphic for \(\Re(s)>1/2\).
+
+For positive non-perfect-power \(a\),
+\[
+\log|\operatorname{Disc}(K_n(a))|
+\le
+[K_n(a):\mathbf Q](3\log n+\log a),
+\]
+and the source-matched GRH Chebotarev estimate is
+\[
+\pi_n(x)
+=
+\frac{\operatorname{li}(x)}{[K_n(a):\mathbf Q]}
++
+O_a(\sqrt{x}\log(nx)).
+\]
+Consequently, on compact subsets of \(\Re(s)>1/2\),
+\[
+C_{K_n(a)}(s)=O_{a,\Omega}(\log(2n)).
+\]
+
+This is the decisive obstruction: on prime levels \(q\),
+\[
+|g_z(q)|=1-q^{-z}\to1,
+\]
+so the available continued finite-level bound is not summable over the tower. A moving truncation also stops at the known logarithmic error because the prime-supported large-divisor tail has no available power-saving estimate at a power-sized cutoff.
+
+The logarithmic derivative removes branch choices but does not improve tower convergence. No Level-2 or Level-3 continuation of the full \(Q_a\) is proved, and no natural-boundary claim is made.
+
+Detailed proof analysis is in notes/continuation-proof.md.
 
 ## Session-4 computational pilot
 
-The exact Session-2 arithmetic code has been extended with sieve-backed prime/factor data, exact residual indices, prime Dirichlet sums, logarithmic Euler products, the source-matched positive non-perfect-power Kummer degree formula, complex-z diagnostics, and matched-cutoff normalization.
+The exact arithmetic engine contains sieve-backed prime/factor data, exact residual indices, prime Dirichlet sums, logarithmic Euler products, the source-matched positive non-perfect-power Kummer degree formula, complex-\(z\) diagnostics, and matched-cutoff normalization.
 
 Default reproducible pilot parameters are \(X=10^6\) and \(N=5\times10^5\), with bases \(2,3,5,6,10\). The full unit-test suite has 13 passing tests. Results and reproducibility details are in notes/computational-pilot.md.
 
+Session 5 made no code changes because the decisive obstruction is analytic rather than numerical.
+
 ## What survives
 
-At fixed Kummer level, the completely-split prime series has the standard finite-Galois character decomposition into Artin/Dedekind \(L\)-functions. For real \(z>0\), the Kummer-indicator expansion can also be interchanged absolutely with the prime sum in \(\Re(s)>1\).
+The primary analytic object remains \(Q_a(s,z)\), with \(Q_a^\circ(s,z)\) preferred for proof bookkeeping.
 
-The unresolved difficulty is tower-level: after separating the finite-level \(L\)-function expressions, the original divisor-support convergence is lost, and degree growth alone does not justify an infinite \(L\)-product.
+The theorem-sized surviving problem is now narrower:
 
-The theorem-sized next question is whether, under a precise hypothesis package,
-\[
-Q_a(s,z)
-\]
-admits holomorphic continuation to any half-plane \(\Re(s)>1-\delta\) with \(\delta>0\), perhaps through a uniformly controlled Kummer-tower \(L\)-function or logarithmic-derivative expansion.
+> Can one prove a power-saving **tower-averaged centered Kummer discrepancy**, preserving the original divisor-support structure, rather than summing termwise continued finite-level \(L\)-function bounds?
+
+A successful result would need cancellation across \(n\), a power-saving estimate for the large-divisor prime tail, or a different argument that avoids tower separation.
 
 ## Research gates
 
@@ -98,14 +160,15 @@ admits holomorphic continuation to any half-plane \(\Re(s)>1-\delta\) with \(\de
 1. FOUNDATIONAL DERIVATION — complete: FOUNDATIONS_PASS  
 2. PRIOR-ART / NOVELTY AUDIT — complete: PRIOR_ART_REFRAME  
 3. REFRAMED COMPUTATIONAL / ANALYTIC PILOT — complete: ANALYTIC_PILOT_REFRAME  
-4. NEXT PROOF / STRUCTURAL SESSION — only in reframed form around \(Q_a(s,z)\)  
-5. GENERALISATION — deferred  
-6. LEAN / FORMALISATION — deferred  
-7. ADVERSARIAL NOVELTY AUDIT — later  
-8. PAPER — later
+4. REFRAMED MATHEMATICAL PROOF — complete: CONTINUATION_PROOF_OBSTRUCTED  
+5. NEXT PROOF SESSION — only in reframed form around tower-averaged power-saving discrepancy  
+6. GENERALISATION — deferred  
+7. LEAN / FORMALISATION — deferred  
+8. ADVERSARIAL NOVELTY AUDIT — later  
+9. PAPER — later
 
 ## Current exit state
 
-**ANALYTIC_PILOT_REFRAME**
+**CONTINUATION_PROOF_OBSTRUCTED**
 
-The frozen Euler product remains useful notation, but Session 4 found that its Level-1 boundary behavior collapses to a standard consequence of the known weighted prime asymptotic. The centered weighted prime Dirichlet series \(Q_a(s,z)\) is now the preferred analytic target. No novelty claim is made for that target.
+The continuation target remains substantive, but the natural Kummer/Chebotarev/\(L\)-function route is rigorously blocked at the tower-summation step by nonsummable finite-level bounds and only logarithmic control of the divisor-supported tail. This is a method obstruction, not a theorem of non-continuation.

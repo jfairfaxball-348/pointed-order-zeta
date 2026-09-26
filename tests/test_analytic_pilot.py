@@ -7,6 +7,7 @@ from src.analytic_pilot import (
     log_remainder,
     log_z,
     matched_log_h,
+    matched_log_h_omitted,
     mobius_convolution_weight,
     prime_dirichlet_sum,
     quadratic_discriminant_of_positive_a,
@@ -51,6 +52,12 @@ class AnalyticPilotTests(unittest.TestCase):
         value = matched_log_h(data, self.primes, s, 0, 1, 200)
         expected = math.log(1 - 2 ** (-s)) + math.log(1 - 3 ** (-s))
         self.assertAlmostEqual(value.real, expected, places=12)
+        self.assertAlmostEqual(value.imag, 0.0, places=12)
+
+    def test_z0_omitted_prime_normalization_is_exactly_one(self):
+        data = compute_prime_residual_data(6, 200, self.primes, self.spf)
+        value = matched_log_h_omitted(data, self.primes, 1.3, 0, 1, 200)
+        self.assertAlmostEqual(value.real, 0.0, places=12)
         self.assertAlmostEqual(value.imag, 0.0, places=12)
 
 

@@ -143,3 +143,20 @@ Generalisation, Lean/formalisation, and paper work were not begun.
 **PILOT_KILL**
 
 No Session 7 should occur under this project.
+
+## Successor direction (2026-10-24)
+
+This project studied a single row of the power-residue table: whether a fixed base `a` is an
+n-th power mod `p` as `p` varies. Along one row everything is Chebotarev, and the object collapsed
+into generalized Artin theory.
+
+The successor programme, **Reciprocity Spectra**, studies the *whole matrix* of power-residue
+symbols between primes, `((π/ρ)_n)`, against a random-matrix null model fixed by reciprocity. Its
+pilot found:
+
+- metaplectic (theta-function) outliers for n = 3, 4;
+- an arithmetic `1/log D` compression of the quadratic spectrum.
+
+It lives in the PRIMES repository under `reciprocity_spectra/`, on the branch
+`ccr-958d8794-8hq6vc` at the time of writing. Its `LESSONS.md` records what this pilot taught:
+packaging is not novelty, and an early prior-art gate plus an honest kill are worth keeping.
